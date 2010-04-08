@@ -1,0 +1,17 @@
+- title "Pages"
+
+%table
+  %tr
+    %th Name
+    %th Description
+    %th Permalink
+  - for page in @pages
+    %tr
+      %td= h page.name
+      %td= h page.description
+      %td= h page.permalink
+      %td= link_to 'Show', page
+      %td= link_to 'Edit', edit_page_path(page)
+      %td= link_to 'Destroy', page, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Page", new_page_path

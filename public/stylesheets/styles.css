@@ -1,0 +1,54 @@
+@charset "utf-8";
+/*---------------------- 
+  RESET CSS
+------------------------*/
+html, body, div, 
+h1, h2, h3, h4, h5, h6, 
+p, blockquote, 
+a, span, img, strong, 
+dl, dt, dd, ol, ul, li,
+form, fieldset, label, input, textarea
+{
+     margin: 0px;
+     padding: 0px;
+     border: none;
+     outline: 0px; 
+     font-weight: normal;
+}
+ul, ol, li{list-style-type: none;}
+a{text-decoration:none; color:#000;}
+a:hover{
+	text-decoration:underline;
+}
+/*---------------------- 
+  CUSTOM CSS
+------------------------*/
+/* typography */
+body {
+	color: #8e8e8e;
+	font-family: Trebuchet MS;
+	font-size:12px;
+	background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {font-weight:bold; color:#000000; margin:0px;}
+strong{font-weight:bold;}
+p {margin:0 0 13px;}
+
+/*------------------------- constant style -----------------------------*/
+.left{float:left;}
+.right{float:right;}
+.clear{clear:both;}
+.block{display:block;}
+.au{margin:0 auto;}
+.ac {text-align:center;}
+.al{text-align:left;}
+.ar{text-align:right;}
+.r{margin:0px; padding:0px; border:none; list-style: none;}
+.none{text-indent:-9999px; font-size:1%; overflow:hidden;}
+.n{display:none;}
+.block{display:block;}
+
+/* constant typography */
+.b{font-weight:bold;}
+

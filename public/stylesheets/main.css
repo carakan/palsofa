@@ -1,0 +1,389 @@
+@charset "utf-8";
+/*-----------------------------------------
+  				HOME PAGE
+ ------------------------------------------*/
+#wrapper{
+	width:946px;
+	margin:0 auto;
+}
+/*---------------------- 
+  HEADER
+------------------------*/
+#header{
+	height:137px;
+	background:transparent url(../images/bgHeader.jpg) repeat-x scroll 0 0;
+        position:relative;
+}
+h1.logo{
+	float:left;
+	height:97px;
+	width:222px;
+}
+h1.logo a{
+	background:transparent url(../images/logo.jpg) no-repeat scroll 0 0;
+	display:block;
+	height:97px;
+	width:222px;
+}
+
+/*------ nav -------*/
+#menu { 
+    float:right;
+    margin:47px 0 0;
+    text-align:right;
+    width:550px;
+    position:relative;
+}
+#menu ul.nav{
+	display:inline-block; 
+}
+#menu ul.nav li{
+    float:left;
+    margin:0 0 0 28px;
+}
+#menu ul.nav li a{
+    font-size:11px;
+    color:#5d5e5e;
+}
+#menu ul.nav li a:hover{
+    color:#3B99D4;
+    text-decoration:none;
+}
+#menu ul.nav li ul{
+    display:block;
+    left:-90px;
+    position:absolute;
+    top:60px;
+    width:700px;
+    z-index:100;
+}
+.breadcrums{
+    position:absolute;
+    top:108px;
+    width:500px;
+}
+.breadcrums ul{
+    display:inline-block;
+}
+.breadcrums ul li{
+    float:left;
+    margin:0 5px 0 0;
+}
+.breadcrums ul li a{
+    color:#343434;
+}
+.breadcrums ul li a:hover{
+    color:#3B99D4;
+    text-decoration:none;
+}
+.breadcrums ul li span{
+    font-weight:bold;
+    color:#3b99d4;
+}
+/*------------------------ MAIN CONTENT -------------------------------*/
+#content{
+	width:946px;
+}
+/*---------------------- 
+  BODY
+------------------------*/
+#body{
+    padding:20px 0px 0px;
+}
+.sobreNosotros{
+    border-top:1px solid #DDDDDD;
+    padding:35px 0;
+}
+.sobreNosotros .boxLeft{
+    float:left;
+    width:445px;
+}
+.sobreNosotros .boxLeft h3{
+    background:url("../images/arrow.jpg") no-repeat scroll right center transparent;
+    color:#3A99D4;
+    display:inline-block;
+    font-size:18px;
+    margin:0 0 10px;
+    padding:0 20px 0 0;
+}
+.sobreNosotros .boxLeft p{
+    line-height:18px;
+    margin:0 0 12px;
+}
+.sobreNosotros .boxLeft a{
+    text-indent:-99999px;
+    display:block;
+    width:129px;
+    height:25px;
+    background: transparent url(../images/btnComprarSofa.jpg) no-repeat scroll 0 0;
+}
+.sobreNosotros .boxRight{
+    float:right;
+    overflow:hidden;
+    text-align:right;
+    width:500px;
+}
+ul.ProductsHome {
+    display:inline-block;
+}
+ul.ProductsHome li{
+    background:url("../images/bgProduct.jpg") no-repeat scroll 0 0 transparent;
+    float:left;
+    height:175px;
+    margin:0 0 0 20px;
+    padding:8px 8px 8px 9px;
+    text-align:left;
+    width:210px;
+}
+ul.ProductsHome li h3{
+    background:url("../images/arrow1.jpg") no-repeat scroll right center transparent;
+    color:#494849;
+    display:inline-block;
+    font-size:15px;
+    margin:0 0 2px 15px;
+    padding:0 12px 0 0;
+}
+ul.ProductsHome li span{
+    display:block;
+    margin:0 0 0 15px;
+    color:#7a7a7a;
+}
+
+
+/*------------------------ footer -------------------------------*/
+#footer{
+	background:transparent url(../images/footer.jpg) repeat-x scroll left top;
+}
+.subfooter{
+    border-bottom:1px solid #DDDDDD;
+    border-top:1px solid #DDDDDD;
+    padding:35px 0 20px;
+}
+.print{
+    text-indent:-99999px;
+    display:block;
+    width:289px;
+    height:119px;
+    float:left;
+    background: transparent url(../images/imgDescuentos.jpg) no-repeat scroll 0 0;
+}
+.listIcon ul{
+    
+}
+.listIcon ul li{
+    float:left;
+    height:40px;
+    margin:0 0 0 20px;
+    padding:60px 0 0;
+    width:135px;
+    text-align:center;
+}
+.listIcon ul li span{
+   font-size:11px;
+}
+.listIcon ul li.bgHorarios{
+   background: transparent url(../images/imgHorarios.jpg) scroll no-repeat  center top;
+}
+.listIcon ul li.bgParking{
+   background: transparent url(../images/imgParking.jpg) scroll no-repeat  center top;
+}
+.listIcon ul li.bgTransporte{
+   background: transparent url(../images/imgTransporte.jpg) no-repeat scroll center top;
+}
+.listIcon ul li.bgFinanciamos{
+   background: transparent url(../images/imgFinanciamos.jpg) no-repeat scroll center top;
+}
+.contentFoot{
+    border-bottom:1px solid #DDDDDD;
+    padding:34px 0 20px;
+}
+.comboSelect{
+    width:180px;
+    float:left;
+}
+.comboSelect select{
+    height:23px;
+}
+.newsletter{
+    float:left;
+    margin:0 0 0 70px;
+    width:400px;
+}
+.newsletter input{
+    background-color:#F1F0F0;
+    border:1px solid #DBDBDB;
+    color:#616262;
+    display:block;
+    float:left;
+    font-size:11px;
+    height:20px;
+    padding:3px 5px 0 0;
+    text-align:right;
+    width:187px;
+}
+.btnSuscripcion{
+    display:block;
+    width:194px;
+    height:25px;
+    border:none;
+    background: transparent url(../images/btnNewsletter.jpg) no-repeat scroll 0 0;
+    float:left;
+    text-indent:-9999px;
+}
+.networks{
+    float:right;
+    width:200px;
+}
+.networks ul{
+   display:inline-block;
+}
+.networks ul li{
+    float:left;
+    margin:0 0 0 10px;
+}
+.networks ul li a{
+    display:block;
+    height:20px;
+    width:54px;
+    text-indent:-9999px;
+}
+.networks ul li a.facebook{
+    background: transparent url(../images/facebook.jpg) no-repeat scroll 0 0;
+}
+.networks ul li a.twitter{
+    background: transparent url(../images/twitter.jpg) no-repeat scroll 0 0;
+}
+.networks ul li a.youtube{
+    background: transparent url(../images/youtube.jpg) no-repeat scroll 0 0;
+}
+.foot{
+    padding:20px 0;
+}
+.foot span{
+   color:#3a99d4;
+}
+/* PAGE PRODUCTOS */
+.subheader{
+    padding:20px 0px;
+    border-bottom:1px solid #DDDDDD;
+}
+.subheader .left{
+     width:215px;
+}
+.subheader .left h3 , h3.title{
+     background:url("../images/arrow.jpg") no-repeat scroll right center transparent;
+    color:#3A99D4;
+    display:inline-block;
+    font-size:18px;
+    margin:0 0 10px;
+    padding:0 20px 0 0;
+}
+.subheader .left ul {
+    width:195px;
+}
+.subheader .left ul li{
+    border-bottom:1px solid #DDDDDD;
+    padding:4px 0;
+}
+.subheader .left ul li.last{
+    border-bottom:none;
+}
+.subheader .left ul li a{
+    font-size:13px;
+    color:#494949;
+}
+.subheader .left ul li a:hover{
+    color:#3A99D4;
+    text-decoration:none;
+}
+.subheader .right{
+    width:703px;
+    overflow:hidden;
+}
+
+.products{
+    margin:0px 0px 20px;
+}
+.products ul{
+    display:inline-block;
+}
+.products ul li{
+    background:url("../images/bgProduct2.jpg") no-repeat scroll right center transparent;
+    float:left;
+    height:219px;
+    margin:0 16px 0 0;
+    padding:8px 8px 8px 7px;
+    width:209px;
+}
+.products ul li.last{
+    margin:0px;
+}
+.products ul li h3{
+    background:url("../images/arrow1.jpg") no-repeat scroll right center transparent;
+    color:#494849;
+    display:inline-block;
+    font-size:15px;
+    margin:5px 0 2px 15px;
+    padding:0 12px 0 0;
+}
+.products ul li span.description{
+    color:#7A7A7A;
+    display:block;
+    margin:0 0 0 15px;
+}
+.price{
+     display:inline-block;
+    margin:5px 0 0;
+}
+.price strong{
+    background:url("../images/bgPrice.jpg") no-repeat scroll right center transparent;
+    color:#FFFFFF;
+    display:block;
+    float:left;
+    font-size:15px;
+    height:26px;
+    margin:0 5px 0 15px;
+    padding:5px 0 0;
+    text-align:center;
+    width:64px;
+}
+.price a{
+    background:url("../images/reservar.jpg") no-repeat scroll right center transparent;
+    display:block;
+    width:115px;
+    height:31px;
+    float:left;
+    text-indent:-9999px;
+}
+.comparte{
+    display:inline-block;
+    font-family:arial;
+    font-size:10px;
+    margin:5px 0 0;
+    padding:0 0 0 15px;
+}
+.comparte .btnFacebook{
+    background:transparent url("../images/btnFacebook.jpg") no-repeat scroll left top;
+    display:inline-block;
+    width:8px;
+    height:10px;
+    text-indent:-9999px;
+}
+.comparte .btnTwitter{
+    background:transparent url("../images/btnTwitter.jpg") no-repeat scroll left top;
+    display:inline-block;
+    width:8px;
+    height:10px;
+    text-indent:-9999px;
+}
+.comparte .btnRecomienda{
+    background:url("../images/email.jpg") no-repeat scroll left center transparent;
+    color:#FF8D31;
+    padding:0 0 0 13px;
+}
+.comparte span{
+    padding:0 3px;
+}
+.comparte b{
+    color:#3b99d4;
+}

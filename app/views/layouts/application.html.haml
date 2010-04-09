@@ -2,133 +2,17 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Proyect
-    %link{:href => "stylesheets/styles.css", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "stylesheets/main.css", :rel => "stylesheet", :type => "text/css"}/
+    %title= h(yield(:title) || "Grupo Palsofa")
+    = stylesheet_link_tag 'styles', 'main'
     /[if IE 6]
       <link rel="stylesheet" type="text/css" href="stylesheets/ie.css" />
     :javascript
       $(document).ready(function(){
-
       });
   %body
     #wrapper
-      #header
-        %h1.logo
-          %a{:href => "/", :title => "Palsofa Grupo"}
-            %span.n Palsofa Grupo
-        %h2.n Venta de sofas
-        #menu
-          %ul.nav
-            %li
-              %a{:href => "#", :title => "inicio"}
-                INICIO
-            %li
-              %a{:href => "#", :title => "productos"}
-                PRODUCTOS
-              %ul
-                %li
-                  %a{:href => "#", :title => "SOF\303\201S 3+2"} SOFÁS 3+2
-                %li
-                  %a{:href => "#", :title => " SOF\303\201S CAMA"} SOFÁS CAMA
-                %li
-                  %a{:href => "#", :title => "CHAISELONGUE"} CHAISELONGUE
-                %li
-                  %a{:href => "#", :title => "RELAX"} RELAX
-                %li
-                  %a{:href => "#", :title => "RINCONERAS"} RINCONERAS
-                %li
-                  %a{:href => "#", :title => "BUTACAS"} BUTACAS
-                %li
-                  %a{:href => "#", :title => "DESCANSO"} DESCANSO
-                %li
-                  %a{:href => "#", :title => "OUTLET"} OUTLET
-            %li
-              %a{:href => "#", :title => "About Susan"}
-                SERVICIOS
-            %li
-              %a{:href => "#", :title => "trabaja con nosotros"}
-                TRABAJA CON NOSOTROS
-            %li
-              %a{:href => "#", :title => "tiendas"}
-                TIENDAS
-            %li
-              %a{:href => "#", :title => "contacto"}
-                CONTACTO
-        .breadcrums
-          %ul
-            %li
-              Estás aquí:
-            %li
-              %a{:href => "#", :title => "home"} Home
-              %b >
-            %li
-              %span Productos
-      .slideshow
-        %img{:alt => "slideshow", :src => "images/slideshow.jpg"}/
-      #content
-        .sobreNosotros
-          .boxLeft
-            %h3 Sobre Nosotros
-            %p El Lorem ipsum Grupo Palsofá se dedica a la venta de sofás desde hace más de 15 años. En la actualidad posee 5 tiendas.
-            %p Su posicionamiento como empresa: sofás de buena calidad a precio económico. El Lorem ipsum Grupo Palsofá se dedica a la venta de sofás desde hace más de 15 años. En la actualidad posee 5 tiendas. Su posicionamiento como empresa: sofás de buena calidad a precio económico.
-            %a.btnComprarSofa{:href => "#", :title => "comprar sofa"} Comprar Sofa
-          .boxRight
-            %ul.ProductsHome
-              %li
-                %a{:href => "#", :title => "product"}
-                  %img{:alt => "product", :src => "images/imgProduct.jpg"}/
-                %h3 Sofas
-                %span Todos los sofás 30% off
-              %li
-                %a{:href => "#", :title => "product"}
-                  %img{:alt => "product", :src => "images/imgProduct.jpg"}/
-                %h3 Sofas
-                %span Todos los sofás 30% off
-          %br.clear/
-      #footer
-        .subfooter
-          %a.print{:href => "#", :title => "imprime tu descuento"} imprime tu descuento
-          .listIcon
-            %ul
-              %li.bgHorarios
-                %strong Amplios horarios
-                %span De Lunes a Sábados
-              %li.bgParking
-                %strong Parking propio
-              %li.bgTransporte
-                %strong Transporte y montaje
-                %span GRATUITOS
-              %li.bgFinanciamos
-                %strong Financiamos su
-                %span compra
-          %br.clear/
-        .contentFoot
-          .comboSelect
-            %form{:action => "#"}
-              %select#select
-                %option Tiendas Palsofá
-                %option Tiendas Palsofá
-                %option Tiendas Palsofá
-          .newsletter
-            %form{:action => "#"}
-              %input#email{:name => "email", :type => "text", :value => "Tu correo @qu\303\255"}/
-              %button.btnSuscripcion SUSCRÍBETE AL NEWSLETTER
-          .networks
-            %ul
-              %li
-                %a.facebook{:href => "#", :title => "facebook"} Facebook
-              %li
-                %a.twitter{:href => "#", :title => "twitter"} twitter
-              %li
-                %a.youtube{:href => "#", :title => "youtube"} youtube
-          %br.clear/
-        .foot
-          .left
-            Diseño
-            %a{:href => "#", :title => "El poder de lo simple"} El poder de lo simple.
-          .right
-            %span © 2010 Grupo Palsofá
-            %br/
-            Todos los derechos reservados
-          %br.clear/
+      = render :partial => '/shared/header'
+      = flash.each do |name, msg|
+        = content_tag :div, msg, :id => "flash_#{name}"
+      = yield
+      = render :partial => '/shared/footer'

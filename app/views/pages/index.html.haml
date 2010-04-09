@@ -1,17 +1,24 @@
 - title "Pages"
 
-%table
-  %tr
-    %th Name
-    %th Description
-    %th Permalink
-  - for page in @pages
-    %tr
-      %td= h page.name
-      %td= h page.description
-      %td= h page.permalink
-      %td= link_to 'Show', page
-      %td= link_to 'Edit', edit_page_path(page)
-      %td= link_to 'Destroy', page, :confirm => 'Are you sure?', :method => :delete
-
-%p= link_to "New Page", new_page_path
+.slideshow
+  %img{:alt => "slideshow", :src => "images/slideshow.jpg"}/
+#content
+  .sobreNosotros
+    .boxLeft
+      %h3 Sobre Nosotros
+      %p El Lorem ipsum Grupo Palsofá se dedica a la venta de sofás desde hace más de 15 años. En la actualidad posee 5 tiendas.
+      %p Su posicionamiento como empresa: sofás de buena calidad a precio económico. El Lorem ipsum Grupo Palsofá se dedica a la venta de sofás desde hace más de 15 años. En la actualidad posee 5 tiendas. Su posicionamiento como empresa: sofás de buena calidad a precio económico.
+      %a.btnComprarSofa{:href => "#", :title => "comprar sofa"} Comprar Sofa
+    .boxRight
+      %ul.ProductsHome
+        %li
+          %a{:href => "#", :title => "product"}
+            %img{:alt => "product", :src => "images/imgProduct.jpg"}/
+          %h3 Sofas
+          %span Todos los sofás 30% off
+        %li
+          %a{:href => "#", :title => "product"}
+            %img{:alt => "product", :src => "images/imgProduct.jpg"}/
+          %h3 Sofas
+          %span Todos los sofás 30% off
+    %br.clear/

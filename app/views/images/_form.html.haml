@@ -1,0 +1,12 @@
+- form_for @image do |f|
+  = f.error_messages
+  %p
+    = f.label :description
+    %br
+    = f.text_field :description
+  %p
+    = f.label :image_filename
+    %br
+    = f.text_field :image_filename
+  %p
+    = f.submit "Submit"

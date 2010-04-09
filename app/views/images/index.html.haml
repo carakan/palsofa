@@ -1,0 +1,15 @@
+- title "Images"
+
+%table
+  %tr
+    %th Description
+    %th Image filename
+  - for image in @images
+    %tr
+      %td= h image.description
+      %td= h image.image_filename
+      %td= link_to 'Show', image
+      %td= link_to 'Edit', edit_image_path(image)
+      %td= link_to 'Destroy', image, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Image", new_image_path

@@ -15,7 +15,7 @@ class ImagesController < ApplicationController
     @image = Image.new(params[:image])
     if @image.save
       flash[:notice] = "Successfully created image."
-      redirect_to @image
+      redirect_to images_url
     else
       render :action => 'new'
     end
@@ -29,7 +29,7 @@ class ImagesController < ApplicationController
     @image = Image.find(params[:id])
     if @image.update_attributes(params[:image])
       flash[:notice] = "Successfully updated image."
-      redirect_to @image
+      redirect_to images_url
     else
       render :action => 'edit'
     end

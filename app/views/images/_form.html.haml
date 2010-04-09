@@ -1,12 +1,12 @@
-- form_for @image do |f|
+- form_for @image, :html => {:multipart => true} do |f|
   = f.error_messages
   %p
     = f.label :description
     %br
     = f.text_field :description
   %p
-    = f.label :image_filename
+    = f.label :image
     %br
-    = f.text_field :image_filename
+    = f.file_field :image
   %p
     = f.submit "Submit"

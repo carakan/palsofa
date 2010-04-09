@@ -7,7 +7,7 @@
   - for image in @images
     %tr
       %td= h image.description
-      %td= h image.image_filename
+      %td= image_tag(image.image.url(:small))
       %td= link_to 'Show', image
       %td= link_to 'Edit', edit_image_path(image)
       %td= link_to 'Destroy', image, :confirm => 'Are you sure?', :method => :delete

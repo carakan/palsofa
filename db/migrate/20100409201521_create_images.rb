@@ -3,6 +3,7 @@ class CreateImages < ActiveRecord::Migration
     create_table :images do |t|
       t.string :description
       t.string :image_file_name
+      t.references :product
       t.timestamps
     end
   end

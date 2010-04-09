@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(:version => 20100409201521) do
   create_table "images", :force => true do |t|
     t.string   "description"
     t.string   "image_file_name"
+    t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

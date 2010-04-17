@@ -6,11 +6,9 @@
   #menu
     %ul.nav
       %li
-        %a{:href => "#", :title => "inicio"}
-          INICIO
+        = link_to('INICIO', root_path, :title => "Inicio")
       %li
-        %a{:href => "#", :title => "productos"}
-          PRODUCTOS
+        = link_to('PRODUCTOS', products_path, :title => "Productos")
         %ul
           %li
             %a{:href => "#", :title => "SOF\303\201S 3+2"} SOFÁS 3+2
@@ -29,22 +27,19 @@
           %li
             %a{:href => "#", :title => "OUTLET"} OUTLET
       %li
-        %a{:href => "#", :title => "About Susan"}
-          SERVICIOS
+        = link_to('SERVICIOS', pages_path(:id => 'servicios'), :title => "Nuestros servicios")
       %li
-        %a{:href => "#", :title => "trabaja con nosotros"}
-          TRABAJA CON NOSOTROS
+        = link_to('TRABAJA CON NOSOTROS', pages_path(:id => 'trabajo'), :title => "trabaja con nosotros")
       %li
         = link_to('TIENDAS', tiendas_path, :title => "Tiendas")
       %li
-        %a{:href => "#", :title => "contacto"}
-          CONTACTO
+        = link_to('CONTACTO', pages_path(:id => 'contacto'), :title => "contacto")
   .breadcrums
     %ul
       %li
         Estás aquí:
       %li
-        %a{:href => "#", :title => "home"} Home
+        = link_to('Home', root_path, :title => "Inicio")
         %b >
       %li
         %span Productos

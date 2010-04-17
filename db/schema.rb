@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100409201521) do
+ActiveRecord::Schema.define(:version => 20100417030716) do
 
   create_table "images", :force => true do |t|
     t.string   "description"
@@ -51,6 +51,16 @@ ActiveRecord::Schema.define(:version => 20100409201521) do
 
   create_table "tags", :force => true do |t|
     t.string "name"
+  end
+
+  create_table "tiendas", :force => true do |t|
+    t.string   "nombre"
+    t.text     "horario"
+    t.string   "urls"
+    t.float    "x"
+    t.float    "y"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "typus_users", :force => true do |t|

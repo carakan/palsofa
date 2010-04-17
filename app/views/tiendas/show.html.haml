@@ -1,0 +1,24 @@
+- title "Tienda"
+
+%p
+  %strong Nombre:
+  =h @tienda.nombre
+%p
+  %strong Horario:
+  =h @tienda.horario
+%p
+  %strong Urls:
+  =h @tienda.urls
+%p
+  %strong X:
+  =h @tienda.x
+%p
+  %strong Y:
+  =h @tienda.y
+
+%p
+  = link_to "Edit", edit_tienda_path(@tienda)
+  |
+  = link_to "Destroy", @tienda, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", tiendas_path

@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :tiendas
+
   map.resources :images
 
   Typus::Routes.draw(map)

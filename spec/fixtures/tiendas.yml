@@ -1,0 +1,13 @@
+one:
+  nombre: MyString
+  horario: MyText
+  urls: MyString
+  x: 1.5
+  y: 1.5
+
+two:
+  nombre: MyString
+  horario: MyText
+  urls: MyString
+  x: 1.5
+  y: 1.5

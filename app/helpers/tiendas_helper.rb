@@ -1,0 +1,2 @@
+module TiendasHelper
+end

@@ -1,0 +1,24 @@
+- form_for @tienda do |f|
+  = f.error_messages
+  %p
+    = f.label :nombre
+    %br
+    = f.text_field :nombre
+  %p
+    = f.label :horario
+    %br
+    = f.text_area :horario
+  %p
+    = f.label :urls
+    %br
+    = f.text_field :urls
+  %p
+    = f.label :x
+    %br
+    = f.text_field :x
+  %p
+    = f.label :y
+    %br
+    = f.text_field :y
+  %p
+    = f.submit "Submit"

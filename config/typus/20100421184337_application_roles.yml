@@ -1,0 +1,7 @@
+# Typus Roles Configuration File
+#
+# Use the README file as a reference to customize settings.
+
+admin:
+  Image: create, read, update, delete
+  Tienda: create, read, update, delete

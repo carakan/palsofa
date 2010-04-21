@@ -1,0 +1,24 @@
+# Typus Models Configuration File
+#
+# Use the README file as a reference to customize settings.
+
+Image:
+  fields:
+    list: description, image_file_name, section
+    form: description, image_file_name, section
+  order_by: 
+  relationships: 
+  filters: 
+  search: 
+  application: palsofa
+
+Tienda:
+  fields:
+    list: nombre, urls, x, y, direccion, telefono
+    form: nombre, horario, urls, x, y, direccion, telefono
+  order_by: 
+  relationships: images
+  filters: 
+  search: 
+  application: palsofa
+

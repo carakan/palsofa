@@ -27,9 +27,9 @@
           %li
             %a{:href => "#", :title => "OUTLET"} OUTLET
       %li
-        = link_to('SERVICIOS', pages_path(:id => 'servicios'), :title => "Nuestros servicios")
+        = link_to('SERVICIOS', {:controller => 'pages', :action => 'servicios'}, :title => "Nuestros servicios")
       %li
-        = link_to('TRABAJA CON NOSOTROS', pages_path(:id => 'trabajo'), :title => "trabaja con nosotros")
+        = link_to('TRABAJA CON NOSOTROS', {:controller => 'pages', :action => 'trabajo'}, :title => "trabaja con nosotros")
       %li
         = link_to('TIENDAS', tiendas_path, :title => "Tiendas")
       %li

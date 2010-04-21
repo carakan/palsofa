@@ -4,7 +4,7 @@
 
 Image:
   fields:
-    list: description, image_file_name, section
+    list: description, image, section
     form: description, image_file_name, section
   order_by: 
   relationships: 
@@ -14,8 +14,8 @@ Image:
 
 Tienda:
   fields:
-    list: nombre, urls, x, y, direccion, telefono
-    form: nombre, horario, urls, x, y, direccion, telefono
+    list: nombre, direccion, telefono, horario, urls
+    form: nombre, direccion, telefono, horario, urls
   order_by: 
   relationships: images
   filters: 

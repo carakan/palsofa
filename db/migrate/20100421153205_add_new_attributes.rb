@@ -6,6 +6,8 @@ class AddNewAttributes < ActiveRecord::Migration
     add_column :images, :attachable_type, :string
     add_column :images, :attachable_id, :integer
     add_column :images, :section, :string, :limit => 20
+    add_column :images, :image_content_type, :string
+
   end
 
   def self.down

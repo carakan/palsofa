@@ -17,7 +17,7 @@ Product:
     list: name, price
     form: name, description, price, other
   order_by: 
-  relationships: 
+  relationships: images
   filters: 
   search: name
   application: palsofa

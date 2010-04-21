@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def index
-    @pages = Page.all
+    @slideshows = Image.all(:conditions => {:section => ''})
   end
   
   def show

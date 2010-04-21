@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20100421153205) do
     t.datetime "updated_at"
     t.string   "attachable_type"
     t.integer  "attachable_id"
+    t.string   "section",         :limit => 20
   end
 
   create_table "pages", :force => true do |t|

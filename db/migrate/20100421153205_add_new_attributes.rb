@@ -5,6 +5,7 @@ class AddNewAttributes < ActiveRecord::Migration
     remove_column :images, :product_id
     add_column :images, :attachable_type, :string
     add_column :images, :attachable_id, :integer
+    add_column :images, :section, :string, :limit => 20
   end
 
   def self.down
@@ -13,5 +14,6 @@ class AddNewAttributes < ActiveRecord::Migration
     add_column :images, :product_id, :integer
     remove_column :images, :attachable_type
     remove_column :images, :attachable_id
+    remove_column :images, :section
   end
 end

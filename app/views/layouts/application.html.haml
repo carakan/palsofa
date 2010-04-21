@@ -3,11 +3,13 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
     %title= h(yield(:title) || "Grupo Palsofa")
-    = stylesheet_link_tag 'styles', 'main'
+    = stylesheet_link_tag 'styles', 'main', 'nivo-slider'
+    = javascript_include_tag 'jquery', 'nivo-slider'
     /[if IE 6]
       <link rel="stylesheet" type="text/css" href="stylesheets/ie.css" />
     :javascript
       $(document).ready(function(){
+        $('#slider').nivoSlider();
       });
   %body
     #wrapper

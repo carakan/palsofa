@@ -42,8 +42,9 @@ h1.logo a{
     margin:0 0 0 28px;
 }
 #menu ul.nav li a{
+    color:#5D5E5E;
+    font-family:Trebuchet MS;
     font-size:11px;
-    color:#5d5e5e;
 }
 #menu ul.nav li a:hover{
     color:#3B99D4;
@@ -71,14 +72,16 @@ h1.logo a{
 }
 .breadcrums ul li a{
     color:#343434;
+    font-family:Trebuchet MS;
 }
 .breadcrums ul li a:hover{
     color:#3B99D4;
     text-decoration:none;
 }
 .breadcrums ul li span{
+    color:#3B99D4;
+    font-family:Trebuchet MS;
     font-weight:bold;
-    color:#3b99d4;
 }
 /*------------------------ MAIN CONTENT -------------------------------*/
 #content{
@@ -88,6 +91,18 @@ h1.logo a{
   BODY
 ------------------------*/
 #body{
+    float:left;
+    margin:40px 0 0 106px;
+    width:622px;
+}
+#body h5{
+    color:#3A99D4;
+    font-family:Trebuchet Ms;
+    font-size:18px;
+    margin:0 0 25px;
+}
+
+#bodyProducts{
     padding:20px 0px 0px;
 }
 .sobreNosotros{
@@ -102,6 +117,7 @@ h1.logo a{
     background:url("../images/arrow.jpg") no-repeat scroll right center transparent;
     color:#3A99D4;
     display:inline-block;
+    font-family:Trebuchet MS;
     font-size:18px;
     margin:0 0 10px;
     padding:0 20px 0 0;
@@ -139,6 +155,7 @@ ul.ProductsHome li h3{
     background:url("../images/arrow1.jpg") no-repeat scroll right center transparent;
     color:#494849;
     display:inline-block;
+    font-family:Trebuchet MS;
     font-size:15px;
     margin:0 0 2px 15px;
     padding:0 12px 0 0;
@@ -148,8 +165,95 @@ ul.ProductsHome li span{
     margin:0 0 0 15px;
     color:#7a7a7a;
 }
+/* SIDEBAR */
+#sidebar{
+    float:left;
+    margin:40px 0 0;
+    width:218px;
+}
+#sidebar h5{
+    color:#090909;
+    font-family:Trebuchet Ms;
+    font-size:18px;
+    margin:0 0 25px;
+}
+ul.listTiendaSidebar{
+    
+}
+ul.listTiendaSidebar li.tienda{
+    padding:0px 0px 14px 0px;
+    border-bottom:1px solid #e2e2e2;
+    margin:0px 0px 14px 0px;
+}
+ul.listTiendaSidebar li.email {
+    color:#4A494A;
+    font-family:Tahoma;
+    font-size:11px;
+    margin:0 0 30px;
+}
+ul.listTiendaSidebar li.email a {
+    text-decoration:underline;
+}
+ul.listTiendaSidebar li.tienda ul{
+    color:#4A494A;
+    font-family:Tahoma;
+    font-size:11px;
+    line-height:16px;
+}
 
-
+ul.listTiendaSidebar li.tienda ul li strong{
+    font-size:12px;
+    font-family:Trebuchet Ms;
+    color:#090909;
+}
+ul.listTiendaSidebar li.tienda ul li a{
+    color:#3b99d4;
+}
+ul.formContact{
+    
+}
+ul.formContact li{
+    float:left;
+    width:216px;
+    margin:0px 27px 25px 0px;
+}
+ul.formContact li.fieldComment{
+   clear:both;
+}
+ul.formContact li.fieldComment textarea{
+    background-color:#E1EFF2;
+    clear:both;
+    display:block;
+    height:318px;
+    overflow:auto;
+    padding:0 0 0 5px;
+    width:459px;
+}
+ul.formContact li label{
+    font-family:Tahoma;
+    font-size:12px;
+    margin:0px 0px 11px;
+    color:#4a494a;
+    display:block;
+}
+ul.formContact li input{
+    width:211px;
+    height:32px;
+    background-color:#e1eff2;
+    padding:0px 0px 0px 5px;
+    display:block;
+}
+button.btnSubmit{
+    background:url("../images/btnEnviarConsulta.jpg") no-repeat scroll left top transparent;
+    border:medium none;
+    clear:both;
+    cursor:pointer;
+    display:block;
+    height:39px;
+    margin:0 0 20px;
+    text-indent:-99999px;
+    width:198px;
+}
 /*------------------------ footer -------------------------------*/
 #footer{
 	background:transparent url(../images/footer.jpg) repeat-x scroll left top;
@@ -172,11 +276,12 @@ ul.ProductsHome li span{
 }
 .listIcon ul li{
     float:left;
+    font-family:trebuchet MS;
     height:40px;
     margin:0 0 0 20px;
     padding:60px 0 0;
-    width:135px;
     text-align:center;
+    width:135px;
 }
 .listIcon ul li span{
    font-size:11px;
@@ -185,13 +290,13 @@ ul.ProductsHome li span{
    background: transparent url(../images/imgHorarios.jpg) scroll no-repeat  center top;
 }
 .listIcon ul li.bgParking{
-   background: transparent url(../images/imgParking.jpg) scroll no-repeat  center top;
+   background: transparent url(../images/imgParking.jpg) scroll no-repeat  top center;
 }
 .listIcon ul li.bgTransporte{
-   background: transparent url(../images/imgTransporte.jpg) no-repeat scroll center top;
+   background: transparent url(../images/imgTransporte.jpg) no-repeat scroll top center;
 }
 .listIcon ul li.bgFinanciamos{
-   background: transparent url(../images/imgFinanciamos.jpg) no-repeat scroll center top;
+   background: transparent url(../images/imgFinanciamos.jpg) no-repeat scroll top center;
 }
 .contentFoot{
     border-bottom:1px solid #DDDDDD;
@@ -271,10 +376,11 @@ ul.ProductsHome li span{
      width:215px;
 }
 .subheader .left h3 , h3.title{
-     background:url("../images/arrow.jpg") no-repeat scroll right center transparent;
+    background:url("../images/arrow.jpg") no-repeat scroll right center transparent;
     color:#3A99D4;
     display:inline-block;
-    font-size:18px;
+    font-family:Trebuchet MS;
+    font-size:14px;
     margin:0 0 10px;
     padding:0 20px 0 0;
 }
@@ -322,13 +428,14 @@ ul.ProductsHome li span{
     background:url("../images/arrow1.jpg") no-repeat scroll right center transparent;
     color:#494849;
     display:inline-block;
-    font-size:15px;
+    font-size:12px;
     margin:5px 0 2px 15px;
     padding:0 12px 0 0;
 }
 .products ul li span.description{
     color:#7A7A7A;
     display:block;
+    font-size:11px;
     margin:0 0 0 15px;
 }
 .price{
@@ -386,4 +493,178 @@ ul.ProductsHome li span{
 }
 .comparte b{
     color:#3b99d4;
+}
+/* Page Trabajo */
+.banner{
+    width:218px;
+    margin:0px 0px 30px 0px;
+}
+.BannerEmail a{
+    background:url("../images/bannerEmail.jpg") no-repeat scroll left top transparent;
+    width:218px;
+    height:241px;
+    display:block;
+    margin:0px 0px 20px 0px;
+    text-indent:-99999px;
+}
+.contentTrabajo{
+    width:408px;
+    color:#4a494a;
+    font-family:Tahoma;
+}
+.contentTrabajo p{
+    font-size:12px;
+    line-height:18px;
+    margin:0 0 17px;
+}
+.contentTrabajo p a{
+    color:#3b99d4;
+    text-decoration:underline;
+}
+.contentTrabajo h4{
+    font-family:Trebuchet Ms;
+    font-size:20px;
+    color:#090909;
+    margin:0px 0px 15px 0px;
+}
+ul.ofertasLaborales{
+    
+}
+ul.ofertasLaborales li{
+    margin:0 0 35px;
+}
+ul.ofertasLaborales li h6{
+    background:url("../images/ok.jpg") no-repeat scroll left center transparent;
+    padding:0px 0px 0px 15px;
+    font-family:Trebuchet Ms;
+    font-size:14px;
+    color:#090909;
+}
+ul.ofertasLaborales li strong{
+    color:#090909;
+    display:block;
+    font-family:Trebuchet Ms;
+    font-size:12px;
+    margin:0 0 10px;
+}
+.contentOferta{
+    font-family:Tahoma;
+    font-size:12px;
+}
+ul.ofertasLaborales li p{
+    line-height:18px;
+}
+ul.ofertasLaborales li a{
+    color:#3b99d4;
+    font-family: Tahoma;
+    font-size:12px;
+}
+/* PAGE SERVICIOS */
+.SofaCaracteristicas{
+    background:url("../images/SofaCaracteristicas.jpg") no-repeat scroll left top transparent;
+    width:218px;
+    height:297px;
+    display:block;
+    margin:0px 0px 20px 0px;
+    text-indent:-99999px;
+}
+ul.listServicios{
+    font-family:Tahoma;
+    width:430px;
+}
+ul.listServicios li{
+    padding:0px 0px 20px 45px;
+
+}
+ul.listServicios li h3{
+    color:#090909;
+    font-family:Trebuchet MS;
+    font-size:20px;
+    margin:0 0 5px;
+}
+ul.listServicios li p{
+    line-height:18px;
+    margin:0 0 18px;
+}
+ul.listServicios li p a{
+    color:#3b99d4;
+    text-decoration:underline;
+}
+ul.listServicios li.iconHorario{
+    background:url("../images/bgHorarios.jpg") no-repeat scroll left top transparent;
+}
+ul.listServicios li.iconTransporte{
+    background:url("../images/bgParking.jpg") no-repeat scroll left top transparent;
+}
+ul.listServicios li.iconParking{
+    background:url("../images/bgTransporte.jpg") no-repeat scroll left top transparent;
+}
+ul.listServicios li.iconCompra{
+    background:url("../images/bgFinanciamos.jpg") no-repeat scroll left top transparent;
+}
+.line{
+    border-bottom:1px solid #e2e2e2;
+}
+/* PAGE TIENDA */
+.selectTiendas{
+    background:url("../images/bgSelectTienda.jpg") no-repeat scroll left top transparent;
+    width:218px;
+    height:145px;
+    padding:45px 0px 0px 0px;
+    margin:0 0 20px;
+}
+.selectTiendas select{
+    display:block;
+    font-size:15px;
+    height:25px;
+    margin:0 auto;
+    width:150px;
+}
+ul.listTiendas{
+    font-family:Tahoma;
+    color:#4a494a;
+}
+ul.listTiendas li.tienda{
+    margin:0px 0px 45px 0px;
+}
+ul.listTiendas li.tienda h2{
+    font-family:Trebuchet Ms;
+    font-size:20px;
+    color:#090909;
+}
+ul.listTiendas li.tienda p{
+    line-height:17px;
+}
+ul.listTiendas li.tienda p span.direction{
+    display:block;
+}
+ul.listTiendas li.tienda p span.phone{
+    display:block;
+}
+ul.listTiendas li.tienda  strong, ul.listTiendas li.tienda  a,#body ul.listTiendas li.tienda  h5{
+    color:#272727;
+    font-family:Trebuchet Ms;
+    font-size:14px;
+    font-weight:bold;
+    margin:0 0 10px;
+}
+ul.listTiendas li.tienda  a.linkMaps{
+    background:url("../images/maps.jpg") no-repeat scroll right center transparent;
+    display:inline-block;
+    margin:10px 0;
+    padding:0 20px 0 0;
+}
+ul.listTiendas li.tienda blockquote{
+    line-height:17px;
+}
+ul.listImgTiendas{
+    display:inline-block;
+}
+ul.listImgTiendas li{
+    background:url("../images/bgImgTienda.jpg") no-repeat scroll left top transparent;
+    width:67px;
+    height:46px;
+    padding:6px;
+    float:left;
+    margin:0px 10px 0px 0px;
 }

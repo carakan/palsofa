@@ -1,0 +1,17 @@
+%li.tienda
+  %h2= tienda.nombre
+  %p
+    %span.direction= tienda.direccion
+    %span.phone= "Teléfono y fax: #{tienda.telefono}"
+  %strong Horario
+  %blockquote
+    = tienda.horario
+  %a.linkMaps{:href => "#", :title => "Encuentra Tu Sof\303\241 en Google Maps"}
+    Encuentra Tu Sofá en Google Maps
+  %h5 Imágenes de la tienda
+  %ul.listImgTiendas
+    - if tienda.images.count > 0
+      - tienda.images.each do |image|
+        %li= link_to(image_tag(image.image.url(:small), :class => 'block'), image.image.url())
+    - else
+      Sin imagenes

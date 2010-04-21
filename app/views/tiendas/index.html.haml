@@ -1,21 +1,19 @@
 - title "Tiendas"
 
-%table
-  %tr
-    %th Nombre
-    %th Horario
-    %th Urls
-    %th X
-    %th Y
-  - for tienda in @tiendas
-    %tr
-      %td= h tienda.nombre
-      %td= h tienda.horario
-      %td= h tienda.urls
-      %td= h tienda.x
-      %td= h tienda.y
-      %td= link_to 'Show', tienda
-      %td= link_to 'Edit', edit_tienda_path(tienda)
-      %td= link_to 'Destroy', tienda, :confirm => 'Are you sure?', :method => :delete
+#content
+  #sidebar
+    %h5 SELECCIONA TU TIENDA
+    .selectTiendas
+      %form{:action => "#"}
+        = select_tienda
+    .banner
+      %a{:href => "#", :title => "banner"}
+        %img.block{:alt => "banner", :src => "images/banner.jpg"}/
+  #body
+    %h5 TIENDAS
+    %ul.listTiendas
+      - for tienda in @tiendas
+        = render :partial => 'show', :locals => {:tienda => tienda}
+  %br.clear/
 
 %p= link_to "New Tienda", new_tienda_path

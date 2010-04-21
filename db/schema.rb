@@ -9,14 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100417030716) do
+ActiveRecord::Schema.define(:version => 20100421153205) do
 
   create_table "images", :force => true do |t|
     t.string   "description"
     t.string   "image_file_name"
-    t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "attachable_type"
+    t.integer  "attachable_id"
   end
 
   create_table "pages", :force => true do |t|
@@ -61,6 +62,8 @@ ActiveRecord::Schema.define(:version => 20100417030716) do
     t.float    "y"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "direccion"
+    t.string   "telefono"
   end
 
   create_table "typus_users", :force => true do |t|

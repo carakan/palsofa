@@ -1,0 +1,79 @@
+#content
+  #sidebar
+    %h5 SELECCIONA TU TIENDA
+    %ul.listTiendaSidebar
+      %li.tienda
+        %ul
+          %li
+            %strong Tu Sofá
+          %li Carretera Bilbao Galdakao, 8.48450. Etxebarri, Vizcaya.
+          %li Teléfono y fax: 94 449 08 22
+          %li
+            %a{:href => "#", :title => "ver mas informacion"} Ver más información »
+      %li.tienda
+        %ul
+          %li
+            %strong Bilbo Sofá
+          %li Carretera Bilbao Galdakao, Km 7. Entrada a
+          %li Basauri por el puente Urbi. Vizcaya
+          %li
+            Teléfono y fax:
+            %strong 94 449 99 02
+          %li
+            %a{:href => "#", :title => "ver mas informacion"} Ver más información »
+      %li.tienda
+        %ul
+          %li
+            %strong Sofatti
+          %li Tomás Zubiria e Ibarra 1 .48007. Bilbao, Vizcaya
+          %li Basauri por el puente Urbi. Vizcaya
+          %li
+            Teléfono y fax:
+            %strong 94 446 29 27
+          %li
+            %a{:href => "#", :title => "ver mas informacion"} Ver más información »
+      %li.tienda
+        %ul
+          %li
+            %strong Sofa 2000
+          %li Barrio Mallabiena s/n.48215. Iurreta, Vizcaya
+          %li Basauri por el puente Urbi. Vizcaya
+          %li
+            Teléfono y fax:
+            %strong 94 620 37 61
+          %li
+            %a{:href => "#", :title => "ver mas informacion"} Ver más información »
+      %li.tienda
+        %ul
+          %li
+            %strong Bizkai Sofá
+          %li Barrio Olabarri 8.48960. Galdakao, Vizcaya
+          %li
+            Teléfono y fax:
+            %strong 94 426 64 04
+          %li
+            %a{:href => "#", :title => "ver mas informacion"} Ver más información »
+      %li.email
+        %span También puedes escribir a
+        %a{:href => "mailto:info@palsofa.com", :title => "info@palsofa.com"} info@palsofa.com
+  #body
+    %h5 FORMULARIO DE CONTACTO
+    %form{:action => "#"}
+      %ul.formContact
+        %li
+          %label Nombre y Apellido
+          %input#nombre{:name => "nombre", :type => "text", :value => ""}/
+        %li
+          %label E-mail
+          %input#E-mail{:name => "E-mail", :type => "text", :value => ""}/
+        %li
+          %label Teléfono
+          %input#telefono{:name => "telefono", :type => "text", :value => ""}/
+        %li
+          %label Ciudad
+          %input#Ciudad{:name => "Ciudad", :type => "text", :value => ""}/
+        %li.fieldComment
+          %label Mensaje
+          %textarea#mensaje{:cols => "4", :name => "mensaje", :rows => "4"}
+      %button.btnSubmit{:type => "submit"} Enviar Consulta
+  %br.clear/

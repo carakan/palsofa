@@ -33,7 +33,7 @@
       %li
         = link_to('TIENDAS', tiendas_path, :title => "Tiendas")
       %li
-        = link_to('CONTACTO', pages_path(:id => 'contacto'), :title => "contacto")
+        = link_to('CONTACTO', {:controller => 'pages', :action => 'contact'}, :title => "contacto")
   .breadcrums
     %ul
       %li

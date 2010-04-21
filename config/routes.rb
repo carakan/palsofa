@@ -4,7 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :images
 
   Typus::Routes.draw(map)
-  map.resources :pages
+  map.resources :pages, :collection => {:contact => :get}
 
   map.resources :products
 

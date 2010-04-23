@@ -26,3 +26,6 @@ config.action_view.cache_template_loading            = true
 
 # Enable threaded mode
 # config.threadsafe!
+
+ActionMailer::Base.delivery_method = :sendmail
+ActionMailer::Base.default_charset = "utf-8"

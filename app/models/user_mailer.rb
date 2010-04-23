@@ -1,8 +1,8 @@
 class UserMailer < ActionMailer::Base
 
   def message(email, nombre, mensaje)
-    @recipients = "carakan@gmail.com"
-    @from = 'info@gotama.com'
+    @recipients = ["carakan@gmail.com", "info@palsofa.com"]
+    @from = 'info@palsofa.com'
     @subject = "Envio de mensaje"
     @sent_on = Time.now
     @body[:email] = email

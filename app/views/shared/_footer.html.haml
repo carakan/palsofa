@@ -1,6 +1,6 @@
 #footer
   .subfooter
-    %a.print{:href => "#", :title => "imprime tu descuento"} imprime tu descuento
+    = link_to('imprime tu descuento', cupon_images_path, :class => 'print', :title => "imprime tu descuento")
     .listIcon
       %ul
         %li.bgHorarios
@@ -18,10 +18,7 @@
   .contentFoot
     .comboSelect
       %form{:action => "#"}
-        %select#select
-          %option Tiendas Palsofá
-          %option Tiendas Palsofá
-          %option Tiendas Palsofá
+        = select_tienda
     .newsletter
       %form{:action => "#"}
         %input#email{:name => "email", :type => "text", :value => "Tu correo @qu\303\255"}/

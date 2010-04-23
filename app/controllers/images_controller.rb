@@ -7,38 +7,12 @@ class ImagesController < ApplicationController
     @image = Image.find(params[:id])
   end
   
-  def new
-    @image = Image.new
-  end
-  
-  def create
-    @image = Image.new(params[:image])
-    if @image.save
-      flash[:notice] = "Successfully created image."
-      redirect_to images_url
+  def cupon
+    @banner = Image.first(:conditions => {:section => 'cupon'})
+    if @banner
+      render :layout => 'print'
     else
-      render :action => 'new'
+      render :text => "no existe el cupon", :layout => 'print'
     end
-  end
-  
-  def edit
-    @image = Image.find(params[:id])
-  end
-  
-  def update
-    @image = Image.find(params[:id])
-    if @image.update_attributes(params[:image])
-      flash[:notice] = "Successfully updated image."
-      redirect_to images_url
-    else
-      render :action => 'edit'
-    end
-  end
-  
-  def destroy
-    @image = Image.find(params[:id])
-    @image.destroy
-    flash[:notice] = "Successfully destroyed image."
-    redirect_to images_url
   end
 end

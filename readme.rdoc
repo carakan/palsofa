@@ -1,1 +1,3 @@
 = Palsofa
+
+Simple web site using haml and typus, Released on MIT Licence.

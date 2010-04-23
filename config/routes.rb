@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :tiendas
 
-  map.resources :images
+  map.resources :images, :collection => {:cupon => :get}
 
   Typus::Routes.draw(map)
   

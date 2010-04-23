@@ -47,6 +47,15 @@ class PagesController < ApplicationController
   end
 
   def servicios
+  end
 
+  def contact
+    @tiendas = Tienda.all
+  end
+
+  def sended
+    flash[:notice] = "Se envio el mensaje, gracias por contactarnos"
+    UserMailer.deliver_message(params[:email], params[:nombre], "#{params[:mensaje]} \n\n URL #{params[:url]}  \n\n #{request.referer}")
+    redirect_to root_url
   end
 end

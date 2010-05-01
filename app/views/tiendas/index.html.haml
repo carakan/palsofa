@@ -4,8 +4,7 @@
   #sidebar
     %h5 SELECCIONA TU TIENDA
     .selectTiendas
-      %form{:action => "#"}
-        = select_tienda
+      = render :partial => '/shared/selectienda'
     .banner
       %a{:href => "#", :title => "banner"}
         %img.block{:alt => "banner", :src => "images/banner.jpg"}/

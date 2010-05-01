@@ -1,5 +1,5 @@
 %li.tienda
-  %h2= tienda.nombre
+  %h2= link_to(tienda.nombre, tienda)
   %p
     %span.direction= tienda.direccion
     %span.phone= "Teléfono y fax: #{tienda.telefono}"

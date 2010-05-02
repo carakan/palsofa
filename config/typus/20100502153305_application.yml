@@ -1,0 +1,15 @@
+# Typus Models Configuration File
+#
+# Use the README file as a reference to customize settings.
+
+Newsletter:
+  fields:
+    list: name, email
+    form: name, email
+  order_by: 
+  relationships: 
+  filters: 
+  search: name
+  application: palsofa
+
+

@@ -1,0 +1,14 @@
+<h1><%= Typus::Configuration.options[:app_name] %></h1>
+
+<ul>
+  <% links.each do |link| -%>
+    <li><%= link %></li>
+  <% end -%>
+</ul>
+
+<ul class="center">
+  <li><%= link_to('Tiendas', {:controller => 'admin/tiendas'}) %></li>
+  <li><%= link_to('Productos', {:controller => 'admin/products'}) %></li>
+  <li><%= link_to('Imagenes', {:controller => 'admin/images'}) %></li>
+  <li><%= link_to('Newsletter', {:controller => 'admin/newsletters'}) %></li>
+</ul>

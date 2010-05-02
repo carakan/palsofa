@@ -64,6 +64,10 @@ a.on { color: #333; font-weight: bold; text-decoration: underline; }
 #header .left ul { display: block; float: left; margin-top: 1em; }
 #header .left li, #header .right li { display: inline; padding-left: 0.5em; }
 
+#header .center {
+  padding: 0 100px;
+}
+
 /* @end */
 
 /* @group Content */

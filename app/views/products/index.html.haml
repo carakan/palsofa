@@ -19,6 +19,7 @@
       %ul
         - Product.select_product(params[:id], 'Novedad').each do |product|
           = render(:partial => 'show', :locals => {:sofa => product})
+    .products
       %h3.title LOS MÁS VENDIDOS
       %ul
         - Product.select_product(params[:id], 'Mas vendido').each do |product|

@@ -13,6 +13,8 @@ Image:
   application: palsofa
   description: Manejador de imagenes
 
+
+
 Tienda:
   fields:
     list: nombre, direccion, telefono, horario, urls
@@ -22,4 +24,5 @@ Tienda:
   filters: 
   search: nombre, direccion
   application: palsofa
+  description: Manejador de las distintas tiendas
 

@@ -2,6 +2,8 @@ es:
   activerecord:
     models:
       typus_user: Usuario
+      image: Imagenes
+      product: Productos
     attributes:
       typus_user:
         email: "Correo electronico"
@@ -13,4 +15,10 @@ es:
         role: "Rol"
       image:
         description: "Descripcion o url"
+        image: "Seleccione imagen"
+      product:
+        name: Nombre
+        description: Descripcion
+        price: Precio (Euros)
+
         

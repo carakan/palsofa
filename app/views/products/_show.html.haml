@@ -1,11 +1,10 @@
 %li
-  %a{:href => "#", :title => "product"}
-    %img{:alt => "product", :src => "images/imgProduct.jpg"}
+  = link_to(image_tag(sofa.images[0].image.url(:small)), sofa.images[0].image.url(), :title => sofa.name) if !sofa.images.empty?
   %h3= sofa.name
-  %span.description Todos los sofás 30% off
+  %span.description= sofa.description
   .price
-    %strong € 350
-    %a{:href => "#", :title => "reservar"} reservar
+    %strong= "€ #{sofa.price.to_i}"
+    = link_to('reservar', {:controller => 'pages', :action => 'contact', :product => sofa.id}, :title => 'reservar')
     %br.clear/
   .comparte
     %b Comparte en:

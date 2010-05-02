@@ -4,4 +4,8 @@ class Product < ActiveRecord::Base
   acts_as_taggable_on :categories, :specials
 
   has_many :images, :as => :attachable
+
+  def self.select_product(category, section)
+    Product.tagged_with("#{category},#{section}", :match_all => true)
+  end
 end

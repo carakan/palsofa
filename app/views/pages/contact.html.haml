@@ -20,6 +20,10 @@
         %li
           %label Ciudad
           %input#Ciudad{:name => "Ciudad", :type => "text", :value => ""}/
+        - if params[:product]
+          %li
+            %label Producto
+            %input#producto{:name => "producto", :type => "text", :value => Product.first(params[:product]).name}/
         %li.fieldComment
           %label Mensaje
           %textarea#mensaje{:cols => "4", :name => "mensaje", :rows => "4"}

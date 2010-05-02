@@ -12,14 +12,14 @@
     .products
       %h3.title OPORTUNIDADES
       %ul
-        - Product.tagged_with("oportunity_#{params[:id]}").each do |product|
+        - Product.select_product(params[:id], 'Oportunidad').each do |product|
           = render :partial => 'show', :locals => {:sofa => product}
     .products
       %h3.title NOVEDADES
       %ul
-        - Product.tagged_with("novedad_#{params[:id]}").each do |product|
-          = render(:partial => 'show', :locals => {:sofa => product})    .products
+        - Product.select_product(params[:id], 'Novedad').each do |product|
+          = render(:partial => 'show', :locals => {:sofa => product})
       %h3.title LOS MÁS VENDIDOS
       %ul
-        - Product.tagged_with("best_#{params[:id]}").each do |product|
+        - Product.select_product(params[:id], 'Mas vendido').each do |product|
           = render(:partial => 'show', :locals => {:sofa => product})

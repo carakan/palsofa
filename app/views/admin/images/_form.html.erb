@@ -4,9 +4,9 @@
       <%= build_form(@fields, form) %>
       <li>
         <label>
-          Seccion
+          Seccion (si es necesario)
         </label>
-        <%= form.select(:section, ['slide-index', 'cupon']) %>
+        <%= form.select(:section, {'Imagen para la pagina principal' => 'slide-index', 'Imagen para cupon' => 'cupon', 'Banner' => 'banner'}) %>
       </li>
     </ol>
   </fieldset>

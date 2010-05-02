@@ -3,228 +3,23 @@
     .left
       %h3 BUSCA POR CATEGORÍA
       %ul
-        %li
-          %a{:href => "#", :title => "Sof\303\241s 3+2"} Sofás 3+2
-        %li
-          %a{:href => "#", :title => "Sof\303\241s cama"} Sofás cama
-        %li
-          %a{:href => "#", :title => "Chaiselongue"} Chaiselongue
-        %li
-          %a{:href => "#", :title => "Relax"} Relax
-        %li
-          %a{:href => "#", :title => "Rinconeras"} Rinconeras
-        %li
-          %a{:href => "#", :title => "Butacas"} Butacas
-        %li
-          %a{:href => "#", :title => "Descanso"} Descanso
-        %li.last
-          %a{:href => "#", :title => "Outlet"} Outlet
+        - @categories.each do |category|
+          %li= link_to(category.name, {:id => category.name, :action => 'show'}, :title => category.name)
     .right
-      %img{:alt => "palsofa", :src => "images/img1.jpg"}/
-    %br.clear/
+      %img{:alt => "palsofa", :src => "/images/img1.jpg"}
+    %br.clear
   #bodyProducts
     .products
       %h3.title OPORTUNIDADES
       %ul
-        %li
-          %a{:href => "#", :title => "product"}
-            %img{:alt => "product", :src => "images/imgProduct.jpg"}/
-          %h3 Sofá esquinero London
-          %span.description Todos los sofás 30% off
-          .price
-            %strong € 350
-            %a{:href => "#", :title => "reservar"} reservar
-            %br.clear/
-          .comparte
-            %b Comparte en:
-            %a.btnFacebook{:href => "#", :title => "facebook"} Facebook
-            %span l
-            %a.btnTwitter{:href => "#", :title => "facebook"} twitter
-            %span l
-            %a.btnRecomienda{:href => "#", :title => "facebook"} Recomienda
-        %li
-          %a{:href => "#", :title => "product"}
-            %img{:alt => "product", :src => "images/imgProduct.jpg"}/
-          %h3 Sofá esquinero London
-          %span.description Todos los sofás 30% off
-          .price
-            %strong € 350
-            %a{:href => "#", :title => "reservar"} reservar
-            %br.clear/
-          .comparte
-            %b Comparte en:
-            %a.btnFacebook{:href => "#", :title => "facebook"} Facebook
-            %span l
-            %a.btnTwitter{:href => "#", :title => "facebook"} twitter
-            %span l
-            %a.btnRecomienda{:href => "#", :title => "facebook"} Recomienda
-        %li
-          %a{:href => "#", :title => "product"}
-            %img{:alt => "product", :src => "images/imgProduct.jpg"}/
-          %h3 Sofá esquinero London
-          %span.description Todos los sofás 30% off
-          .price
-            %strong € 350
-            %a{:href => "#", :title => "reservar"} reservar
-            %br.clear/
-          .comparte
-            %b Comparte en:
-            %a.btnFacebook{:href => "#", :title => "facebook"} Facebook
-            %span l
-            %a.btnTwitter{:href => "#", :title => "facebook"} twitter
-            %span l
-            %a.btnRecomienda{:href => "#", :title => "facebook"} Recomienda
-        %li.last
-          %a{:href => "#", :title => "product"}
-            %img{:alt => "product", :src => "images/imgProduct.jpg"}/
-          %h3 Sofá esquinero London
-          %span.description Todos los sofás 30% off
-          .price
-            %strong € 350
-            %a{:href => "#", :title => "reservar"} reservar
-            %br.clear/
-          .comparte
-            %b Comparte en:
-            %a.btnFacebook{:href => "#", :title => "facebook"} Facebook
-            %span l
-            %a.btnTwitter{:href => "#", :title => "facebook"} twitter
-            %span l
-            %a.btnRecomienda{:href => "#", :title => "facebook"} Recomienda
+        - Product.tagged_with("oportunity_#{params[:id]}").each do |product|
+          = render :partial => 'show', :locals => {:sofa => product}
     .products
       %h3.title NOVEDADES
       %ul
-        %li
-          %a{:href => "#", :title => "product"}
-            %img{:alt => "product", :src => "images/imgProduct.jpg"}/
-          %h3 Sofá esquinero London
-          %span.description Todos los sofás 30% off
-          .price
-            %strong € 350
-            %a{:href => "#", :title => "reservar"} reservar
-            %br.clear/
-          .comparte
-            %b Comparte en:
-            %a.btnFacebook{:href => "#", :title => "facebook"} Facebook
-            %span l
-            %a.btnTwitter{:href => "#", :title => "facebook"} twitter
-            %span l
-            %a.btnRecomienda{:href => "#", :title => "facebook"} Recomienda
-        %li
-          %a{:href => "#", :title => "product"}
-            %img{:alt => "product", :src => "images/imgProduct.jpg"}/
-          %h3 Sofá esquinero London
-          %span.description Todos los sofás 30% off
-          .price
-            %strong € 350
-            %a{:href => "#", :title => "reservar"} reservar
-            %br.clear/
-          .comparte
-            %b Comparte en:
-            %a.btnFacebook{:href => "#", :title => "facebook"} Facebook
-            %span l
-            %a.btnTwitter{:href => "#", :title => "facebook"} twitter
-            %span l
-            %a.btnRecomienda{:href => "#", :title => "facebook"} Recomienda
-        %li
-          %a{:href => "#", :title => "product"}
-            %img{:alt => "product", :src => "images/imgProduct.jpg"}/
-          %h3 Sofá esquinero London
-          %span.description Todos los sofás 30% off
-          .price
-            %strong € 350
-            %a{:href => "#", :title => "reservar"} reservar
-            %br.clear/
-          .comparte
-            %b Comparte en:
-            %a.btnFacebook{:href => "#", :title => "facebook"} Facebook
-            %span l
-            %a.btnTwitter{:href => "#", :title => "facebook"} twitter
-            %span l
-            %a.btnRecomienda{:href => "#", :title => "facebook"} Recomienda
-        %li.last
-          %a{:href => "#", :title => "product"}
-            %img{:alt => "product", :src => "images/imgProduct.jpg"}/
-          %h3 Sofá esquinero London
-          %span.description Todos los sofás 30% off
-          .price
-            %strong € 350
-            %a{:href => "#", :title => "reservar"} reservar
-            %br.clear/
-          .comparte
-            %b Comparte en:
-            %a.btnFacebook{:href => "#", :title => "facebook"} Facebook
-            %span l
-            %a.btnTwitter{:href => "#", :title => "facebook"} twitter
-            %span l
-            %a.btnRecomienda{:href => "#", :title => "facebook"} Recomienda
-    .products
+        - Product.tagged_with("novedad_#{params[:id]}").each do |product|
+          = render(:partial => 'show', :locals => {:sofa => product})    .products
       %h3.title LOS MÁS VENDIDOS
       %ul
-        %li
-          %a{:href => "#", :title => "product"}
-            %img{:alt => "product", :src => "images/imgProduct.jpg"}/
-          %h3 Sofá esquinero London
-          %span.description Todos los sofás 30% off
-          .price
-            %strong € 350
-            %a{:href => "#", :title => "reservar"} reservar
-            %br.clear/
-          .comparte
-            %b Comparte en:
-            %a.btnFacebook{:href => "#", :title => "facebook"} Facebook
-            %span l
-            %a.btnTwitter{:href => "#", :title => "facebook"} twitter
-            %span l
-            %a.btnRecomienda{:href => "#", :title => "facebook"} Recomienda
-        %li
-          %a{:href => "#", :title => "product"}
-            %img{:alt => "product", :src => "images/imgProduct.jpg"}/
-          %h3 Sofá esquinero London
-          %span.description Todos los sofás 30% off
-          .price
-            %strong € 350
-            %a{:href => "#", :title => "reservar"} reservar
-            %br.clear/
-          .comparte
-            %b Comparte en:
-            %a.btnFacebook{:href => "#", :title => "facebook"} Facebook
-            %span l
-            %a.btnTwitter{:href => "#", :title => "facebook"} twitter
-            %span l
-            %a.btnRecomienda{:href => "#", :title => "facebook"} Recomienda
-        %li
-          %a{:href => "#", :title => "product"}
-            %img{:alt => "product", :src => "images/imgProduct.jpg"}/
-          %h3 Sofá esquinero London
-          %span.description Todos los sofás 30% off
-          .price
-            %strong € 350
-            %a{:href => "#", :title => "reservar"} reservar
-            %br.clear/
-          .comparte
-            %b Comparte en:
-            %a.btnFacebook{:href => "#", :title => "facebook"} Facebook
-            %span l
-            %a.btnTwitter{:href => "#", :title => "facebook"} twitter
-            %span l
-            %a.btnRecomienda{:href => "#", :title => "facebook"} Recomienda
-        %li.last
-          %a{:href => "#", :title => "product"}
-            %img{:alt => "product", :src => "images/imgProduct.jpg"}/
-          %h3 Sofá esquinero London
-          %span.description Todos los sofás 30% off
-          .price
-            %strong € 350
-            %a{:href => "#", :title => "reservar"} reservar
-            %br.clear/
-          .comparte
-            %b Comparte en:
-            %a.btnFacebook{:href => "#", :title => "facebook"} Facebook
-            %span l
-            %a.btnTwitter{:href => "#", :title => "facebook"} twitter
-            %span l
-            %a.btnRecomienda{:href => "#", :title => "facebook"} Recomienda
-
-
-
-%p= link_to "New Product", new_product_path
+        - Product.tagged_with("best_#{params[:id]}").each do |product|
+          = render(:partial => 'show', :locals => {:sofa => product})

@@ -9,7 +9,6 @@ class ApplicationController < ActionController::Base
   # filter_parameter_logging :password
 
   def rescue_action(exception)
-    render :layout => 'application', :text => exception
-    
+    render :layout => 'application', :text => "<pre>#{exception}</pre>"
   end
 end

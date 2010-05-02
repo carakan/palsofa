@@ -10,22 +10,8 @@
       %li
         = link_to('PRODUCTOS', products_path, :title => "Productos")
         %ul
-          %li
-            %a{:href => "#", :title => "SOF\303\201S 3+2"} SOFÁS 3+2
-          %li
-            %a{:href => "#", :title => " SOF\303\201S CAMA"} SOFÁS CAMA
-          %li
-            %a{:href => "#", :title => "CHAISELONGUE"} CHAISELONGUE
-          %li
-            %a{:href => "#", :title => "RELAX"} RELAX
-          %li
-            %a{:href => "#", :title => "RINCONERAS"} RINCONERAS
-          %li
-            %a{:href => "#", :title => "BUTACAS"} BUTACAS
-          %li
-            %a{:href => "#", :title => "DESCANSO"} DESCANSO
-          %li
-            %a{:href => "#", :title => "OUTLET"} OUTLET
+          - @categories.each do |category|
+            %li= link_to(category.name, {:id => category.name, :action => 'show'}, :title => category.name)
       %li
         = link_to('SERVICIOS', {:controller => 'pages', :action => 'servicios'}, :title => "Nuestros servicios")
       %li

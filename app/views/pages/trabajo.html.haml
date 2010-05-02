@@ -7,7 +7,7 @@
         Esperamos tu CV y tus datos.
     .banner
       - image = Image.first(:conditions => {:section => 'banner'})
-      = link_to(image_tag(image.image.url), image.description, :alt => "banner")
+      = link_to(image_tag(image.image.url), image.description, :alt => "banner") if image
   #body
     %h5 EMPLEO
     .contentTrabajo

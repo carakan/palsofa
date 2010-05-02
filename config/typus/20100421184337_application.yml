@@ -11,6 +11,7 @@ Image:
   filters: 
   search: 
   application: palsofa
+  description: Manejador de imagenes
 
 Tienda:
   fields:

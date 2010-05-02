@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :newsletters
+
   map.resources :tiendas
 
   map.resources :images, :collection => {:cupon => :get}

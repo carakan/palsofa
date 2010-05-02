@@ -1,0 +1,15 @@
+- title "Newsletter"
+
+%p
+  %strong Name:
+  =h @newsletter.name
+%p
+  %strong Email:
+  =h @newsletter.email
+
+%p
+  = link_to "Edit", edit_newsletter_path(@newsletter)
+  |
+  = link_to "Destroy", @newsletter, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", newsletters_path

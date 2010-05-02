@@ -1,0 +1,15 @@
+- title "Newsletters"
+
+%table
+  %tr
+    %th Name
+    %th Email
+  - for newsletter in @newsletters
+    %tr
+      %td= h newsletter.name
+      %td= h newsletter.email
+      %td= link_to 'Show', newsletter
+      %td= link_to 'Edit', edit_newsletter_path(newsletter)
+      %td= link_to 'Destroy', newsletter, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Newsletter", new_newsletter_path

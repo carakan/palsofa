@@ -1,0 +1,8 @@
+- title "Edit Newsletter"
+
+= render :partial => 'form'
+
+%p
+  = link_to "Show", newsletter_path(@newsletter)
+  |
+  = link_to "View All", newsletters_path

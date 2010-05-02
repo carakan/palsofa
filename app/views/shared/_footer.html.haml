@@ -19,8 +19,8 @@
     .comboSelect
       = render :partial => '/shared/selectienda'
     .newsletter
-      %form{:action => "#"}
-        %input#email{:name => "email", :type => "text", :value => "Tu correo @qu\303\255"}/
+      - form_for(Newsletter.new) do |f|
+        = f.text_field(:email, :value => "Tu correo @qu\303\255")
         %button.btnSuscripcion SUSCRÍBETE AL NEWSLETTER
     .networks
       %ul

@@ -5,4 +5,4 @@
     %li= tienda.direccion
     %li Teléfono y fax: 94 449 08 22
     %li
-      %a{:href => "#", :title => "ver mas informacion"} Ver más información »
+      = link_to('Ver más información »', {:controller => 'tiendas', :action => 'show', :id => tienda.id}, :title => "ver mas informacion")

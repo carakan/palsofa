@@ -24,6 +24,7 @@
           %li
             %label Producto
             %input#producto{:name => "producto", :type => "text", :value => Product.first(params[:product]).name}/
+            %input#producto{:name => "product_id", :type => "text", :value => Product.first(params[:product]).id, :type => :hidden}/
         %li.fieldComment
           %label Mensaje
           %textarea#mensaje{:cols => "4", :name => "mensaje", :rows => "4"}

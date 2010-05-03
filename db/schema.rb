@@ -21,6 +21,9 @@ ActiveRecord::Schema.define(:version => 20100502235026) do
     t.string   "section",            :limit => 20
     t.string   "image_content_type"
     t.string   "url"
+    t.binary   "image_file"
+    t.binary   "image_small_file"
+    t.binary   "image_tiny_file"
   end
 
   create_table "jobs", :force => true do |t|

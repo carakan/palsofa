@@ -1,7 +1,8 @@
 class Image < ActiveRecord::Base
   has_attached_file :image, :styles => { :tiny => '70x50#', :small => "210x115#" },
-    :url  => "/assets/image/:id/:style/:basename.:extension",
-    :path => ":rails_root/public/assets/image/:id/:style/:basename.:extension"
+    :storage => :database
+
+  default_scope select_without_file_columns_for(:image)
 
   validates_attachment_presence :image
   validates_attachment_size :image, :less_than => 5.megabytes

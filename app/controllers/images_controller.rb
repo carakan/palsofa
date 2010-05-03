@@ -1,4 +1,6 @@
 class ImagesController < ApplicationController
+  downloads_files_for :image, :image
+    
   def index
     @images = Image.all
   end
@@ -15,4 +17,8 @@ class ImagesController < ApplicationController
       render :text => "no existe el cupon", :layout => 'print'
     end
   end
+
+  
+  
+  
 end

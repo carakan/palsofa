@@ -20,40 +20,11 @@
         %a{:href => "mailto:empleo@palsofa.com", :title => "email"} empleo@palsofa.com
       %h4 Ofertas vigentes
       %ul.ofertasLaborales
-        %li
-          %h6 Atención al cliente
-          %strong.date Lunes 5 de Abril, 2010.
-          .contentOferta
-            %p
-              Se precisan teleoperadores en turno de tarde para campaña de orange. 5 horas de lunes a viernes que puedes compatibilizar con tu trabajo o estudios. No es necesaria experiencia.
-            %p
-              Ofrecemos sueldo fijo de 560€ mas importantes comisiones e incentivos.
-          %a.linkOferta{:href => "#", :title => "Postular por correo"} Postular por correo »
-        %li
-          %h6 Atención al cliente
-          %strong.date Lunes 5 de Abril, 2010.
-          .contentOferta
-            %p
-              Se precisan teleoperadores en turno de tarde para campaña de orange. 5 horas de lunes a viernes que puedes compatibilizar con tu trabajo o estudios. No es necesaria experiencia.
-            %p
-              Ofrecemos sueldo fijo de 560€ mas importantes comisiones e incentivos.
-          %a.linkOferta{:href => "#", :title => "Postular por correo"} Postular por correo »
-        %li
-          %h6 Atención al cliente
-          %strong.date Lunes 5 de Abril, 2010.
-          .contentOferta
-            %p
-              Se precisan teleoperadores en turno de tarde para campaña de orange. 5 horas de lunes a viernes que puedes compatibilizar con tu trabajo o estudios. No es necesaria experiencia.
-            %p
-              Ofrecemos sueldo fijo de 560€ mas importantes comisiones e incentivos.
-          %a.linkOferta{:href => "#", :title => "Postular por correo"} Postular por correo »
-        %li
-          %h6 Atención al cliente
-          %strong.date Lunes 5 de Abril, 2010.
-          .contentOferta
-            %p
-              Se precisan teleoperadores en turno de tarde para campaña de orange. 5 horas de lunes a viernes que puedes compatibilizar con tu trabajo o estudios. No es necesaria experiencia.
-            %p
-              Ofrecemos sueldo fijo de 560€ mas importantes comisiones e incentivos.
-          %a.linkOferta{:href => "#", :title => "Postular por correo"} Postular por correo »
+        - Job.all(:limit => 10).each do |job|
+          %li
+            %h6= job.title
+            %strong.date= l(job.datejob, :format => :long)
+            .contentOferta
+              = job.description
+            %a.linkOferta{:href => "mailto:empleo@palsofa.com", :title => "Postular por correo"} Postular por correo »
   %br.clear/

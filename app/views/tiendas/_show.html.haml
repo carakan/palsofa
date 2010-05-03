@@ -11,6 +11,6 @@
   %ul.listImgTiendas
     - if tienda.images.count > 0
       - tienda.images.each do |image|
-        %li= link_to(image_tag(image.image.url(:small), :class => 'block'), image.image.url(), :rel => "prettyPhoto[pp_gal#{tienda.id}]")
+        %li= link_to(image_tag(image.image.url(:tiny), :class => 'block'), image.image.url(), :rel => "prettyPhoto[pp_gal#{tienda.id}]")
     - else
       Sin imagenes

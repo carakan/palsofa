@@ -24,12 +24,9 @@
         %button.btnSuscripcion SUSCRÍBETE AL NEWSLETTER
     .networks
       %ul
-        %li
-          %a.facebook{:href => "#", :title => "facebook"} Facebook
-        %li
-          %a.twitter{:href => "#", :title => "twitter"} twitter
-        %li
-          %a.youtube{:href => "#", :title => "youtube"} youtube
+        - Image.all(:conditions => {:section => 'footer'}).each do |icon|
+          %li
+            = link_to(image_tag(icon.image.url), icon.url, :title => icon.description)
     %br.clear/
   .foot
     .left

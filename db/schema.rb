@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100502023514) do
+ActiveRecord::Schema.define(:version => 20100502235026) do
 
   create_table "images", :force => true do |t|
     t.string   "description"
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(:version => 20100502023514) do
     t.integer  "attachable_id"
     t.string   "section",            :limit => 20
     t.string   "image_content_type"
+    t.string   "url"
+  end
+
+  create_table "jobs", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.date     "datejob"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "newsletters", :force => true do |t|

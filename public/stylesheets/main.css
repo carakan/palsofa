@@ -350,7 +350,6 @@ button.btnSubmit{
     display:block;
     height:20px;
     width:54px;
-    text-indent:-9999px;
 }
 .networks ul li a.facebook{
     background: transparent url(../images/facebook.jpg) no-repeat scroll 0 0;
@@ -468,6 +467,9 @@ button.btnSubmit{
     font-size:10px;
     margin:5px 0 0;
     padding:0 0 0 15px;
+}
+.comparte div{
+  float: right;
 }
 .comparte .btnFacebook{
     background:transparent url("../images/btnFacebook.jpg") no-repeat scroll left top;

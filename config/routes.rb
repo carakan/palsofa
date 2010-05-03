@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :jobs
+
   map.resources :newsletters
 
   map.resources :tiendas

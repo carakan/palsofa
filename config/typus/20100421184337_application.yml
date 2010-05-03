@@ -4,8 +4,8 @@
 
 Image:
   fields:
-    list: description, image, section
-    form: description, image_file_name
+    list: description, url, image, section
+    form: description, url, image_file_name
   order_by: 
   relationships: 
   filters: 

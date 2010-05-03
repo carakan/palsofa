@@ -55,7 +55,18 @@ class PagesController < ApplicationController
 
   def sended
     flash[:notice] = "Se envio el mensaje, gracias por contactarnos"
-    UserMailer.deliver_message(params[:email], params[:nombre], "#{params[:mensaje]} \n\n #{request.referer}")
+    if params[:product_id]
+      product = Product.first(params[:product_id])
+      message = <<-EOF
+      Solicitud del producto #{product.name}
+      
+ #{params[:mensaje]} \n\n #{request.referer}
+      EOF
+
+      UserMailer.deliver_message(params[:email], params[:nombre], message)
+    else
+      UserMailer.deliver_message(params[:email], params[:nombre], "#{params[:mensaje]} \n\n #{request.referer}")
+    end
     redirect_to root_url
   end
 end

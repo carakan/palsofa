@@ -9,18 +9,27 @@
       %img{:alt => "palsofa", :src => "/images/img1.jpg"}
     %br.clear
   #bodyProducts
-    .products
-      %h3.title OPORTUNIDADES
-      %ul
-        - Product.select_product(params[:id], 'Oportunidad').each do |product|
-          = render :partial => 'show', :locals => {:sofa => product}
-    .products
-      %h3.title NOVEDADES
-      %ul
-        - Product.select_product(params[:id], 'Novedad').each do |product|
-          = render(:partial => 'show', :locals => {:sofa => product})
-    .products
-      %h3.title LOS MÁS VENDIDOS
-      %ul
-        - Product.select_product(params[:id], 'Mas vendido').each do |product|
-          = render(:partial => 'show', :locals => {:sofa => product})
+    -if params[:action] == 'index'
+      .products
+        %h3.title OPORTUNIDADES
+        %ul
+          - Product.select_product('Oportunidad', true).each do |product|
+            = render :partial => 'show', :locals => {:sofa => product}
+      .products
+        %h3.title NOVEDADES
+        %ul
+          - Product.select_product('Novedad', true).each do |product|
+            = render(:partial => 'show', :locals => {:sofa => product})
+      .products
+        %h3.title LOS MÁS VENDIDOS
+        %ul
+          - Product.select_product('Mas vendido', true).each do |product|
+            = render(:partial => 'show', :locals => {:sofa => product})
+    - else
+      .products
+        %h3.title= params[:id]
+        %ul
+          - Product.select_product(params[:id]).each do |product|
+            = render(:partial => 'show', :locals => {:sofa => product})
+:javascript
+  $('.products li:nth-child(4)').addClass('last');

@@ -5,11 +5,11 @@ class Product < ActiveRecord::Base
 
   has_many :images, :as => :attachable
 
-  def self.select_product(category, section)
-    if category.nil? || category.blank?
-      Product.tagged_with("#{section}").all(:limit => 4)
+  def self.select_product(category, limit = false)
+    if limit
+      Product.tagged_with("#{category}").all(:limit => 4)
     else
-      Product.tagged_with("#{category},#{section}", :match_all => true)
+      Product.tagged_with("#{category}", :match_all => true)
     end
   end
 end

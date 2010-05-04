@@ -1,7 +1,7 @@
 - title "Pages"
 #slider.slideshow
   - @slideshows.each do |image|
-    = image_tag(image.image.url(), :height => "384", :width => "946")
+    = image_tag(image.image.url(), :height => "384", :width => "946", :alt => image.description)
 #content
   .sobreNosotros
     .boxLeft

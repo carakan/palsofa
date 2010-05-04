@@ -10,8 +10,8 @@
       %li
         = link_to('PRODUCTOS', products_path, :title => "Productos")
         %ul
-          - if @categories
-            - @categories.each do |category|
+          - if Product.category_counts
+            - Product.category_counts.each do |category|
               %li= link_to(category.name, {:id => category.name, :action => 'show'}, :title => category.name)
       %li
         = link_to('SERVICIOS', {:controller => 'pages', :action => 'servicios'}, :title => "Nuestros servicios")

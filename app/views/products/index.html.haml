@@ -3,7 +3,7 @@
     .left
       %h3 BUSCA POR CATEGORÍA
       %ul
-        - @categories.each do |category|
+        - Product.category_counts.each do |category|
           %li= link_to(category.name, {:id => category.name, :action => 'show'}, :title => category.name)
     .right
       %img{:alt => "palsofa", :src => "/images/img1.jpg"}

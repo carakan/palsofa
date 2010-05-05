@@ -6,21 +6,28 @@
   #menu
     %ul.nav
       %li
-        = link_to('INICIO', root_path, :title => "Inicio")
+        = link_to('INICIO', root_path, :title => "Inicio", :class => 'link_others')
       %li
-        = link_to('PRODUCTOS', products_path, :title => "Productos")
-        %ul
-          - if Product.category_counts
-            - Product.category_counts.each do |category|
-              %li= link_to(category.name, {:id => category.name, :action => 'show', :controller => 'products'}, :title => category.name)
+        = link_to('PRODUCTOS', products_path, :title => "Productos", :id => 'link_products')
+        - if(params[:controller] == 'products')
+          %ul#list
+            - if Product.category_counts
+              - Product.category_counts.each do |category|
+                %li= link_to(category.name, {:id => category.name, :action => 'show', :controller => 'products'}, :title => category.name)
+        - else
+          %ul#list{:style => 'display:none;'}
+            - if Product.category_counts
+              - Product.category_counts.each do |category|
+                %li= link_to(category.name, {:id => category.name, :action => 'show', :controller => 'products'}, :title => category.name)
+
       %li
-        = link_to('SERVICIOS', {:controller => 'pages', :action => 'servicios'}, :title => "Nuestros servicios")
+        = link_to('SERVICIOS', {:controller => 'pages', :action => 'servicios'}, :title => "Nuestros servicios", :class => 'link_others')
       %li
-        = link_to('TRABAJA CON NOSOTROS', {:controller => 'pages', :action => 'trabajo'}, :title => "trabaja con nosotros")
+        = link_to('TRABAJA CON NOSOTROS', {:controller => 'pages', :action => 'trabajo'}, :title => "trabaja con nosotros", :class => 'link_others')
       %li
-        = link_to('TIENDAS', tiendas_path, :title => "Tiendas")
+        = link_to('TIENDAS', tiendas_path, :title => "Tiendas", :class => 'link_others')
       %li
-        = link_to('CONTACTO', {:controller => 'pages', :action => 'contact'}, :title => "contacto")
+        = link_to('CONTACTO', {:controller => 'pages', :action => 'contact'}, :title => "contacto", :class => 'link_others')
   .breadcrums
     %ul
       %li

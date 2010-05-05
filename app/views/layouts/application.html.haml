@@ -8,6 +8,14 @@
       = javascript_include_tag 'jquery', 'nivo-slider'
       :javascript
         $(document).ready(function(){
+        $('#link_products').hover(function(){
+          $('ul#list').show(250);
+        });
+        $('.link_others').hover(null, function(){
+          $('ul#list').hide(250);
+        })
+        });
+        $(document).ready(function(){
           $('#newsletter_email').focus(function(){
             $(this).val('');
           });
@@ -16,6 +24,14 @@
     - else
       = javascript_include_tag 'jquery132', 'prettyPhoto'
       :javascript
+        $(document).ready(function(){
+        $('#link_products').hover(function(){
+          $('ul#list').show(250);
+        });
+        $('.link_others').hover(null ,function(){
+          $('ul#list').hide(250);
+        })
+        });
         $(document).ready(function(){
           $("a[rel^='prettyPhoto']").prettyPhoto();
           $('#newsletter_email').focus(function(){

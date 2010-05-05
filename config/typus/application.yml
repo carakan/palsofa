@@ -2,7 +2,7 @@
 
 Product:
   fields:
-    list: name, price
+    list: name, price, category_list, special_list
     form: name, description, price
   order_by: 
   relationships: images

@@ -9,7 +9,7 @@
       %img{:alt => "palsofa", :src => "/images/img1.jpg"}
     %br.clear
   #bodyProducts
-    -if params[:action] == 'index'
+    -if !params[:id]
       .products
         %h3.title OPORTUNIDADES
         %ul

@@ -6,11 +6,14 @@
         <label>
           Seccion (si es necesario)
         </label>
-        <%= form.select(:section, {'Imagen para la pagina principal' => 'slide-index', 
+        <%= form.select(:section, {'--Ninguno--' => '',
+                                   'Imagen para la pagina principal' => 'slide-index',
                                    'Imagen para cupon' => 'cupon',
                                    'Banner' => 'banner',
                                    'Iconos sociales' => 'footer'
-                                  }) %>
+                                  }, :selected => '')
+      %>
+
       </li>
     </ol>
   </fieldset>

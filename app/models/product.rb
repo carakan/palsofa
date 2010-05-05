@@ -9,7 +9,7 @@ class Product < ActiveRecord::Base
     if limit
       Product.tagged_with("#{category}").all(:limit => 4)
     else
-      Product.tagged_with("#{category}", :match_all => true)
+      Product.tagged_with("#{category}")
     end
   end
 end

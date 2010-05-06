@@ -7,11 +7,11 @@
           Seccion (si es necesario)
         </label>
         <%= form.select(:section, {'--Ninguno--' => '',
-                                   'Imagen para la pagina principal' => 'slide-index',
-                                   'Imagen para cupon' => 'cupon',
-                                   'Banner' => 'banner',
-                                   'Iconos sociales' => 'footer'
-                                  }, :selected => '')
+            'Imagen para la pagina principal' => 'slide-index',
+            'Imagen para cupon' => 'cupon',
+            'Banner' => 'banner',
+            'Iconos sociales' => 'footer'
+          }, :selected => ((@item.section?) ? @item.section : ''))
       %>
 
       </li>
@@ -23,3 +23,9 @@
     </ol>
   </fieldset>
 <% end %>
+<script>
+  if($('#flash:contains("Tienda")')[0] != null  || $('#flash:contains("Product")')[0] != null){
+    $('#new_image li:eq(1)').hide();
+    $('#new_image li:eq(3)').hide();
+  }
+</script>

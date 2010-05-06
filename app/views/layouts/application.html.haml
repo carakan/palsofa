@@ -11,8 +11,9 @@
         $('#link_products').hover(function(){
           $('ul#list').show(250);
         });
-        $('.link_others').hover(null, function(){
+        $('.link_others').hover(function(){console.log('mierda');}, function(){
           $('ul#list').hide(250);
+          console.log('mierda');
         })
         });
         $(document).ready(function(){
@@ -28,8 +29,9 @@
         $('#link_products').hover(function(){
           $('ul#list').show(250);
         });
-        $('.link_others').hover(null ,function(){
+        $('.link_others').hover(function(){console.log('mierda');} ,function(){
           $('ul#list').hide(250);
+          console.log('mierda');
         })
         });
         $(document).ready(function(){

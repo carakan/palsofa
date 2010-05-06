@@ -55,6 +55,9 @@ class PagesController < ApplicationController
 
   def sended
     flash[:notice] = "Se envio el mensaje, gracias por contactarnos"
+
+    
+
     if params[:product_id]
       product = Product.first(params[:product_id])
       message = <<-EOF

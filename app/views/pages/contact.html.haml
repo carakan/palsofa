@@ -6,27 +6,50 @@
         = render :partial => '/tiendas/show_detail', :locals => {:tienda => tienda}
   #body
     %h5 FORMULARIO DE CONTACTO
+    %div#error{:style => 'display:none;'}
     - form_tag({:action => 'sended'}) do
       %ul.formContact
         %li
           %label Nombre y Apellido
-          %input#nombre{:name => "nombre", :type => "text", :value => ""}/
+          %input#nombre{:name => "nombre", :type => "text", :value => ""}
         %li
           %label E-mail
-          %input#E-mail{:name => "email", :type => "text", :value => ""}/
+          %input#email{:name => "email", :type => "text", :value => ""}
         %li
           %label Teléfono
-          %input#telefono{:name => "telefono", :type => "text", :value => ""}/
+          %input#telefono{:name => "telefono", :type => "text", :value => ""}
         %li
           %label Ciudad
-          %input#Ciudad{:name => "Ciudad", :type => "text", :value => ""}/
+          %input#Ciudad{:name => "Ciudad", :type => "text", :value => ""}
         - if params[:product]
           %li
             %label Producto
-            %input#producto{:name => "producto", :type => "text", :value => Product.first(params[:product]).name}/
-            %input#producto{:name => "product_id", :type => "text", :value => Product.first(params[:product]).id, :type => :hidden}/
+            %input#producto{:name => "producto", :type => "text", :value => Product.first(params[:product]).name}
+            %input#producto{:name => "product_id", :type => "text", :value => Product.first(params[:product]).id, :type => :hidden}
         %li.fieldComment
           %label Mensaje
           %textarea#mensaje{:cols => "4", :name => "mensaje", :rows => "4"}
       %button.btnSubmit{:type => "submit"} Enviar Consulta
   %br.clear/
+
+:javascript
+  $('#body form').submit(function(){
+    var result = true;
+    if($('#nombre').val() == ''){
+      $('#error').append('<p>Indique un nombre.</p>')
+    }
+    if($('#email').val() == ''){
+      $('#error').append('<p>Indique un email.</p>')
+    }
+    if($('#mensaje').val() == ''){
+      $('#error').append('<p>Indique un mensaje.</p>')
+    }
+    if($('#nombre').val() == '' || $('#email').val() == '' || $('#mensaje').val() == ''){
+      result = false;
+      $('#error').show(500);
+      $('html,body').animate({
+        scrollTop: 150
+      }, 500);
+    }
+    return result;
+  });

@@ -4,7 +4,7 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
     %title= h(yield(:title) || "Grupo Palsofa")
     = stylesheet_link_tag 'styles', 'main', 'nivo-slider', 'prettyPhoto'
-    = javascript_include_tag 'jquery132', 'nivo-slider'
+    = javascript_include_tag 'jquery132', 'nivo-slider', 'prettyPhoto'
     :javascript
       $(document).ready(function(){
         $('#link_products').hover(function(){
@@ -19,7 +19,7 @@
         $('#newsletter_email').focus(function(){
           $(this).val('');
         });
-        $('#slider').nivoSlider();
+        $('#slider').nivoSlider({controlNav:false});
         $("a[rel^='prettyPhoto']").prettyPhoto();
       });
     /[if IE 6]

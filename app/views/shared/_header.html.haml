@@ -30,8 +30,11 @@
         = link_to('CONTACTO', {:controller => 'pages', :action => 'contact'}, :title => "contacto", :class => 'link_others')
   .breadcrums
     %ul
-      %li
-        = link_to('Home', root_path, :title => "Inicio")
-        %b >
-      %li
-        %span Productos
+      - if(params[:action] != 'index' && params[:controller] != 'pages')
+        %li
+          = link_to('Home', root_path, :title => "Inicio")
+          %b >
+        %li
+          %span Productos
+      - else
+        %li

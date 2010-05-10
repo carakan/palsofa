@@ -1,5 +1,12 @@
 %li
-  = link_to(image_tag(sofa.images[0].image.url(:small)), sofa.images[0].image.url(), :title => sofa.name, :rel => "prettyPhoto[pp_gal#{sofa.id}]") if !sofa.images.empty?
+  - if !sofa.images.empty?
+    - first_time = true
+    - sofa.images.each do |image|
+      - if first_time
+        = link_to(image_tag(image.image.url(:small), :alt => image.description), image.image.url(), :title => image.description, :rel => "prettyPhoto[pp_gal#{sofa.id}]")
+        - first_time = false
+      - else
+        = link_to(image_tag(image.image.url(:small), :alt => image.description), image.image.url(), :title => image.description, :rel => "prettyPhoto[pp_gal#{sofa.id}]", :style => 'display:none;')
   %h3= sofa.name
   %span.description= sofa.description
   .price

@@ -670,3 +670,27 @@ ul.listImgTiendas li{
     float:left;
     margin:0px 10px 0px 0px;
 }
+.nivo-controlNav{
+  bottom:10px;
+  height:20px;
+  position:absolute;
+  right:20px;
+  width:100px;
+}
+.nivo-controlNav a{
+    background:url("../images/bgNumber.png") no-repeat scroll left top transparent;
+    width:17px;
+    height:17px;
+    padding:0px 0px 0px 0px;
+    font-weight: normal;
+    color: #000;
+    display: block;
+    float: left;
+    margin: 0px 5px 0px 0px;
+    text-align: center;
+}
+.nivo-controlNav a:hover, .nivo-controlNav a.active {
+    text-decoration: none;
+    color: #3A99D4;
+    font-weight: bold;
+}

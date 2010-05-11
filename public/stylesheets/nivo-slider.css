@@ -83,6 +83,3 @@ a.nivo-prevNav {
 	z-index:99;
 	cursor:pointer;
 }
-.nivo-controlNav a.active {
-	font-weight:bold;
-}

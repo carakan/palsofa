@@ -156,7 +156,7 @@
 						}
 						nivoControl.append('<a class="nivo-control" rel="'+ i +'"><img src="'+ child.attr('src').replace(settings.controlNavThumbsSearch, settings.controlNavThumbsReplace) +'"></a>');
 					} else {
-						nivoControl.append('<a class="nivo-control" rel="'+ i +'">'+ i +'</a>');
+						nivoControl.append('<a class="nivo-control" rel="'+ i +'">'+ (i + 1) +'</a>');
 					}
 
 				}

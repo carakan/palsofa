@@ -1,7 +1,7 @@
 class Product < ActiveRecord::Base
-  attr_accessible :name, :description, :price, :other, :category_list, :special_list
+  attr_accessible :name, :description, :price, :other, :category_list, :special_list, :principal_list
 
-  acts_as_taggable_on :categories, :specials
+  acts_as_taggable_on :categories, :specials, :principals
 
   has_many :images, :as => :attachable
 

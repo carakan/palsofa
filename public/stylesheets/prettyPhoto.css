@@ -321,7 +321,7 @@
 			
 			.pp_gallery li.default a {
 				background: url(../images/prettyPhoto/facebook/default_thumbnail.gif) 0 0 no-repeat;
-				display: block;
+				display: none;
 				height: 33px;
 				width: 50px;
 			}

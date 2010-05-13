@@ -12,14 +12,9 @@
       %a.btnComprarSofa{:href => "#", :title => "comprar sofa"} Comprar Sofa
     .boxRight
       %ul.ProductsHome
-        %li
-          %a{:href => "#", :title => "product"}
-            %img{:alt => "product", :src => "images/imgProduct.jpg"}/
-          %h3 Sofas
-          %span Todos los sofás 30% off
-        %li
-          %a{:href => "#", :title => "product"}
-            %img{:alt => "product", :src => "images/imgProduct.jpg"}/
-          %h3 Sofas
-          %span Todos los sofás 30% off
+        - @products.each do |product|
+          %li
+            = link_to(image_tag(product.images[0].image.url(:small), :alt => product.name), product.images[0].image.url(), :rel => "prettyPhoto[pp_gal#{product.id}]") if !product.images.empty?
+            %h3= product.name
+            %span= product.description
     %br.clear/

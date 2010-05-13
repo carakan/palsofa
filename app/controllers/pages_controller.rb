@@ -1,55 +1,23 @@
 class PagesController < ApplicationController
   def index
     @slideshows = Image.all(:conditions => {:section => 'slide-index'})
+    @products = Product.tagged_with("Home").all(:limit => 2)
   end
   
   def show
     @page = Page.find(params[:id])
   end
   
-  def new
-    @page = Page.new
-  end
-  
-  def create
-    @page = Page.new(params[:page])
-    if @page.save
-      flash[:notice] = "Successfully created page."
-      redirect_to @page
-    else
-      render :action => 'new'
-    end
-  end
-  
-  def edit
-    @page = Page.find(params[:id])
-  end
-  
-  def update
-    @page = Page.find(params[:id])
-    if @page.update_attributes(params[:page])
-      flash[:notice] = "Successfully updated page."
-      redirect_to @page
-    else
-      render :action => 'edit'
-    end
-  end
-  
-  def destroy
-    @page = Page.find(params[:id])
-    @page.destroy
-    flash[:notice] = "Successfully destroyed page."
-    redirect_to pages_url
-  end
-
   def trabajo
-    
+    @name_page = "Trabajo"
   end
 
   def servicios
+    @name_page = "Servicios"
   end
 
   def contact
+        @name_page = "Contacto"
     @tiendas = Tienda.all
   end
 

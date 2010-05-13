@@ -8,11 +8,17 @@
     :javascript
       $(document).ready(function(){
         $('#link_products').hover(function(){
+          $('ul#listienda').hide();
           $('ul#list').show(250);
         });
         $('.link_others').hover(function(){
+          $('ul#listienda').hide();
           $('ul#list').hide(250);
-        })
+        });
+        $('#link_tiendas').hover(function(){
+          $('ul#list').hide();
+          $('ul#listienda').show(250);
+        });
         $('#newsletter_email').focus(function(){
           $(this).val('');
         });

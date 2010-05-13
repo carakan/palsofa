@@ -25,16 +25,19 @@
       %li
         = link_to('TRABAJA CON NOSOTROS', {:controller => 'pages', :action => 'trabajo'}, :title => "trabaja con nosotros", :class => 'link_others')
       %li
-        = link_to('TIENDAS', tiendas_path, :title => "Tiendas", :class => 'link_others')
+        = link_to('TIENDAS', tiendas_path, :title => "Tiendas", :id => 'link_tiendas')
+        %ul#listienda{:style => 'display:none;'}
+          - Tienda.all.each do |tienda|
+            %li= link_to(tienda.nombre, {:id => tienda.nombre, :action => 'show', :controller => 'tiendas'}, :title => tienda.nombre)
       %li
         = link_to('CONTACTO', {:controller => 'pages', :action => 'contact'}, :title => "contacto", :class => 'link_others')
   .breadcrums
     %ul
-      - if(params[:action] != 'index' && params[:controller] != 'pages')
+      - if(params[:action] == 'index' && params[:controller] == 'pages')
+        %li
+      - else
         %li
           = link_to('Home', root_path, :title => "Inicio")
           %b >
         %li
-          %span Productos
-      - else
-        %li
+          %span= @name_page

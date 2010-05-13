@@ -1,5 +1,4 @@
 class NewslettersController < ApplicationController
-  
   def create
     @newsletter = Newsletter.new(params[:newsletter])
     if @newsletter.save
@@ -9,5 +8,4 @@ class NewslettersController < ApplicationController
       redirect_to root_url
     end
   end
-  
 end

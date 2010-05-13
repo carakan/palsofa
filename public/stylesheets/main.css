@@ -52,7 +52,7 @@ h1.logo a{
 }
 #menu ul.nav li ul{
     display:block;
-    left:-90px;
+    left:-110px;
     position:absolute;
     top:60px;
     width:700px;
@@ -396,6 +396,7 @@ button.btnSubmit{
 .subheader .left ul li a{
     font-size:13px;
     color:#494949;
+    font-family:TRebuchet MS;
 }
 .subheader .left ul li a:hover{
     color:#3A99D4;
@@ -552,6 +553,8 @@ ul.ofertasLaborales li strong{
 .contentOferta{
     font-family:Tahoma;
     font-size:12px;
+    line-height: 18px;
+    margin: 0px 0px 10px 0px;
 }
 ul.ofertasLaborales li p{
     line-height:18px;

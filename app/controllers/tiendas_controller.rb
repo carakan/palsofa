@@ -1,6 +1,6 @@
 class TiendasController < ApplicationController
   def index
-        @name_page = "Tienda"
+        @name_page = "Tiendas"
     if params[:id]
       @tiendas = Tienda.all(:conditions => {:id => params[:id]})
     else
@@ -10,7 +10,7 @@ class TiendasController < ApplicationController
   end
   
   def show
-    @name_page = "Tienda"
+    @name_page = "Tiendas"
     @tiendas = Tienda.all(:conditions => {:id => params[:id]})
     render :action => :index
   end

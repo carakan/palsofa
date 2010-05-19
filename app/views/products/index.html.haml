@@ -6,7 +6,7 @@
         - Product.category_counts.each do |category|
           %li= link_to(category.name, {:id => category.name, :action => 'show'}, :title => category.name)
     .right
-      %img{:alt => "palsofa", :src => "/images/img1.jpg"}
+      %img{:alt => "palsofa", :src => "/images/banner-producto.jpg"}
     %br.clear
   #bodyProducts
     -if !params[:id]

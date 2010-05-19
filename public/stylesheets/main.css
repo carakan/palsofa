@@ -439,28 +439,28 @@ button.btnSubmit{
     margin:0 0 0 15px;
 }
 .price{
-     display:inline-block;
-    margin:5px 0 0;
+  display:inline-block;
+  margin:5px 0 2px;
 }
 .price strong{
-    background:url("../images/bgPrice.jpg") no-repeat scroll right center transparent;
-    color:#FFFFFF;
-    display:block;
-    float:left;
-    font-size:15px;
-    height:26px;
-    margin:0 5px 0 15px;
-    padding:5px 0 0;
-    text-align:center;
-    width:64px;
+  background:url("../images/bgPrice.png") no-repeat scroll right center transparent;
+  color:#FFFFFF;
+  display:block;
+  float:left;
+  font-size:15px;
+  height:26px;
+  margin:0 5px 0 15px;
+  padding:5px 0 0 11px;
+  text-align:center;
+  width:70px;
 }
 .price a{
-    background:url("../images/reservar.jpg") no-repeat scroll right center transparent;
-    display:block;
-    width:115px;
-    height:31px;
-    float:left;
-    text-indent:-9999px;
+  background:url("../images/reservar.png") no-repeat scroll right center transparent;
+  display:block;
+  float:left;
+  height:31px;
+  text-indent:-9999px;
+  width:97px;
 }
 .comparte{
     display:inline-block;

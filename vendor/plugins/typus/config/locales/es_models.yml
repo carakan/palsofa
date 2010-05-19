@@ -22,4 +22,4 @@ es:
         description: Descripcion
         price: Precio (Euros)
       tienda:
-        url: 'Enlace (empieze con http://)'
+        urls: 'Enlace (empieze con http://)'

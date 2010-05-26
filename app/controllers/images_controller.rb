@@ -1,6 +1,6 @@
 class ImagesController < ApplicationController
   downloads_files_for :image, :image
-    
+  
   def index
     @images = Image.all
   end
@@ -8,7 +8,7 @@ class ImagesController < ApplicationController
   def show
     @image = Image.find(params[:id])
   end
-  
+
   def cupon
     @banner = Image.first(:conditions => {:section => 'cupon'})
     if @banner
@@ -17,8 +17,4 @@ class ImagesController < ApplicationController
       render :text => "no existe el cupon", :layout => 'print'
     end
   end
-
-  
-  
-  
 end

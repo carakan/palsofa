@@ -12,4 +12,8 @@ class Image < ActiveRecord::Base
   def to_s
     return "Imagen #{self.description}"
   end
+
+  def self.cupon
+    Image.first(:conditions => {:section => 'cupon'}, :order => 'created_at DESC')
+  end
 end

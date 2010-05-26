@@ -5,7 +5,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :tiendas
 
-  map.resources :images, :collection => {:cupon => :get}
+  map.resources :images, :collection => {:cupones => :get}
 
   Typus::Routes.draw(map)
   
@@ -14,6 +14,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :products
 
   map.root :controller => "pages"
+
+  map.cupon '/cupones/:id', :controller => :images, :action => 'image'
 
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

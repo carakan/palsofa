@@ -1,6 +1,6 @@
 #content
   #sidebar
-    %h5 SELECCIONA TU TIENDA
+    %h5 TIENDAS
     %ul.listTiendaSidebar
       - for tienda in @tiendas
         = render :partial => '/tiendas/show_detail', :locals => {:tienda => tienda}

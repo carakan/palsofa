@@ -6,7 +6,7 @@
   %strong Horario
   %blockquote
     = tienda.horario
-  = link_to('Encuentra Tu Sofá en Google Maps', tienda.urls, :title => "Encuentra Tu Sof\303\241 en Google Maps", :class => 'linkMaps', :target => '_blank')
+  = link_to("Encuentra #{tienda.nombre} en Google Maps", tienda.urls, :title => "Encuentra #{tienda.nombre} en Google Maps", :class => 'linkMaps', :target => '_blank')
   %h5 Imágenes de la tienda
   %ul.listImgTiendas
     - if tienda.images.count > 0

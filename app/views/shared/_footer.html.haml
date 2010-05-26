@@ -1,6 +1,8 @@
 #footer
   .subfooter
-    = link_to('imprime tu descuento', Image.cupon.image.url(), :class => 'print', :title => "imprime tu descuento", :target => '_blank')
+    - url_to_download = "#"
+    - url_to_download = Image.cupon.image.url() if Image.cupon
+    = link_to('imprime tu descuento', url_to_download, :class => 'print', :title => "imprime tu descuento", :target => '_blank')
     .listIcon
       %ul
         %li.bgHorarios

@@ -22,7 +22,7 @@ class PagesController < ApplicationController
   end
 
   def sended
-    flash[:notice] = "Se envio el mensaje, gracias por contactarnos"
+    flash[:notice] = "Ya eres parte del Newsletter de Palsofá."
 
     
 

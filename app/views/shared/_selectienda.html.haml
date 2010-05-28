@@ -1,6 +1,6 @@
 - form_tag(tiendas_path, :method => :get, :id => 'selectienda'+tienda) do
   %div
-    = select_tienda
+    = select_tienda(tienda)
 :javascript
   $(document).ready(function(){
   $('#selectienda#{tienda} select.selectienda').change(function(){

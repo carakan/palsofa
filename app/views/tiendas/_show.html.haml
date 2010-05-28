@@ -5,7 +5,7 @@
     %span.phone= "Teléfono y fax: #{tienda.telefono}"
   %strong Horario
   %blockquote
-    %span= tienda.horario
+    %div= tienda.horario
   = link_to("Encuentra #{tienda.nombre} en Google Maps", tienda.urls, :title => "Encuentra #{tienda.nombre} en Google Maps", :class => 'linkMaps', :onclick=>"this.target='_blank'")
   %h5 Imágenes de la tienda
   %ul.listImgTiendas

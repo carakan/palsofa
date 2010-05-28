@@ -1,6 +1,9 @@
-- form_tag(tiendas_path, :method => :get) do
-  = select_tienda
-  :javascript
-    $('select.selectienda').change(function(){
-      $(this).parent('form').submit();
-    })
+- form_tag(tiendas_path, :method => :get, :id => 'selectienda') do
+  %div
+    = select_tienda
+:javascript
+  $(document).ready(function(){
+  $('select.selectienda').change(function(){
+    $('#selectienda').submit();
+  });
+  });

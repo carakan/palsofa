@@ -62,6 +62,11 @@ h1.logo a{
     position:absolute;
     top:108px;
     width:500px;
+    text-align: left;
+}
+.listIcon{
+  display: inline-block;
+  width: 620px;
 }
 .breadcrums ul{
     display:inline-block;

@@ -19,11 +19,12 @@
     %br.clear/
   .contentFoot
     .comboSelect
-      = render :partial => '/shared/selectienda'
+      = render :partial => '/shared/selectienda', :locals => {:tienda => '1'}
     .newsletter
       - form_for(Newsletter.new) do |f|
-        = f.text_field(:email, :value => "Tu correo @qu\303\255")
-        %button.btnSuscripcion SUSCRÍBETE AL NEWSLETTER
+        %div
+          = f.text_field(:email, :value => "Tu correo @qu\303\255")
+          %button.btnSuscripcion SUSCRÍBETE AL NEWSLETTER
     .networks
       %ul
         - Image.all(:conditions => {:section => 'footer'}).each do |icon|

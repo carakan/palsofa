@@ -1,9 +1,9 @@
-- form_tag(tiendas_path, :method => :get, :id => 'selectienda') do
+- form_tag(tiendas_path, :method => :get, :id => 'selectienda'+tienda) do
   %div
     = select_tienda
 :javascript
   $(document).ready(function(){
-  $('select.selectienda').change(function(){
-    $('#selectienda').submit();
+  $('#selectienda#{tienda} select.selectienda').change(function(){
+    $('#selectienda#{tienda}').submit();
   });
   });

@@ -4,7 +4,7 @@
   #sidebar
     %h5 SELECCIONA TU TIENDA
     .selectTiendas
-      = render :partial => '/shared/selectienda'
+      = render :partial => '/shared/selectienda', :locals => {:tienda => '2'}
     .banner
       - image = Image.first(:conditions => {:section => 'banner'})
       = link_to(image_tag(image.image.url), image.description, :alt => "banner") if image

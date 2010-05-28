@@ -36,9 +36,20 @@
       - if(params[:action] == 'index' && params[:controller] == 'pages')
         %li
       - else
-        %li
-          Estas aqui
-          = link_to('Home', root_path, :title => "Inicio")
-          %b >
-        %li
-          %span= @name_page
+        - if(params[:action] == 'show' && params[:controller] == 'products')
+          %li
+            Estas aqui
+            = link_to('Home', root_path, :title => "Inicio")
+            %b >
+          %li
+            = link_to('Productos', products_path, :title => "Productos")
+            %b >
+          %li
+            = params[:id].mb_chars.capitalize
+        - else
+          %li
+            Estas aqui
+            = link_to('Home', root_path, :title => "Inicio")
+            %b >
+          %li
+            %span= @name_page

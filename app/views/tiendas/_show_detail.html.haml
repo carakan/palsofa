@@ -3,6 +3,6 @@
     %li
       %strong= tienda.nombre
     %li= tienda.direccion
-    %li Teléfono y fax: 94 449 08 22
+    %li= "Teléfono y fax: #{tienda.telefono}"
     %li
       = link_to('Ver más información »', {:controller => 'tiendas', :action => 'show', :id => tienda.id}, :title => "ver mas informacion")

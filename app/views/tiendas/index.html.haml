@@ -5,9 +5,7 @@
     %h5 SELECCIONA TU TIENDA
     .selectTiendas
       = render :partial => '/shared/selectienda', :locals => {:tienda => '2'}
-    .banner
-      - image = Image.first(:conditions => {:section => 'banner'})
-      = link_to(image_tag(image.image.url), image.description, :alt => "banner") if image
+    = render :partial => '/shared/banner'
   #body
     %h5 TIENDAS
     %ul.listTiendas

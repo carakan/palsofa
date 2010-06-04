@@ -422,7 +422,8 @@ module Paperclip
             style = params[:style] ? params[:style] : 'original'
             send_data model_record.send(attachment).file_contents(style),
                       :filename => model_record.send("#{attachment}_file_name".to_sym),
-                      :type => model_record.send("#{attachment}_content_type".to_sym)
+                      :type => model_record.send("#{attachment}_content_type".to_sym),
+                      :disposition => 'inline'
           end
         end
       end

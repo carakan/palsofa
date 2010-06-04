@@ -5,9 +5,7 @@
       %a{:href => "mailto:empleo@palsofa.com", :title => "email"}
         Buscamos tu ayuda,escribe a:empleo@palsofa.com
         Esperamos tu CV y tus datos.
-    .banner
-      - image = Image.first(:conditions => {:section => 'banner'})
-      = link_to(image_tag(image.image.url), image.description, :alt => "banner") if image
+    = render :partial => '/shared/banner'
   #body
     %h5 EMPLEO
     .contentTrabajo

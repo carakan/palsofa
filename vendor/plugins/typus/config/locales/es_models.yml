@@ -17,6 +17,7 @@ es:
       image:
         description: "Descripcion"
         image: "Seleccione imagen"
+        url: "Url de destino (http://)"
       product:
         name: Nombre
         description: Descripcion

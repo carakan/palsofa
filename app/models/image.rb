@@ -5,7 +5,7 @@ class Image < ActiveRecord::Base
 
   validates_attachment_presence :image
   validates_attachment_size :image, :less_than => 1.megabyte
-  validates_attachment_content_type :image, :content_type => ['image/jpeg', 'image/png']
+  
 
   belongs_to :attachable, :polymorphic => true
 

@@ -459,6 +459,9 @@ button.btnSubmit{
   text-align:center;
   width:70px;
 }
+.price strong.outlet {
+  background:url("../images/bgPricewout.png") no-repeat scroll right center transparent;
+}
 .price a{
   background:url("../images/reservar.png") no-repeat scroll right center transparent;
   display:block;

@@ -8,7 +8,7 @@
       - else
         = link_to(image_tag(image.image.url(:small), :alt => image.description), image.image.url(), :title => image.description, :rel => "prettyPhoto[pp_gal#{sofa.id}]", :style => 'display:none;')
   %h3= sofa.name
-  %span.description= sofa.description
+  %span.description= truncate(sofa.description, :length => 60)
   .price
     %strong= "€ #{sofa.price.to_i}"
     = link_to('reservar', {:controller => 'pages', :action => 'contact', :product => sofa.id}, :title => 'reservar')

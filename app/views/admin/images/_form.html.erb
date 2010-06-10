@@ -8,7 +8,7 @@
         </label>
         <%= form.select(:section, {'--Ninguno--' => '',
             'Imagen para la pagina principal' => 'slide-index',
-            'Imagen para cupon' => 'cupon',
+            'Imagen/pdf para cupon' => 'cupon',
             'Banner' => 'banner',
             'Iconos sociales' => 'footer'
           }, :selected => ((@item.section?) ? @item.section : ''))

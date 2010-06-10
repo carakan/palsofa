@@ -32,4 +32,9 @@
           - Product.select_product(params[:id]).each do |product|
             = render(:partial => 'show', :locals => {:sofa => product})
 :javascript
-  $('.products li:nth-child(4)').addClass('last');
+  $('.products li:eq(3)').addClass('last');
+  $('.products li:eq(7)').addClass('last');
+  $('.products li:eq(11)').addClass('last');
+  $('.products li:eq(15)').addClass('last');
+  $('.products li:eq(19)').addClass('last');
+  $('.products li:eq(23)').addClass('last');

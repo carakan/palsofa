@@ -10,7 +10,10 @@
   %h3= sofa.name
   %span.description= truncate(sofa.description, :length => 60)
   .price
-    %strong= "€ #{sofa.price.to_i}"
+    - if params[:id] && params[:id] == 'OUTLET'
+      %strong.outlet= "€ #{sofa.price.to_i}"
+    - else
+      %strong= "€ #{sofa.price.to_i}"
     = link_to('reservar', {:controller => 'pages', :action => 'contact', :product => sofa.id}, :title => 'reservar')
     %br.clear/
   .comparte

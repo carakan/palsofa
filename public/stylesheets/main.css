@@ -418,13 +418,13 @@ button.btnSubmit{
 .products ul{
     display:inline-block;
 }
-.products ul li{
-    background:url("../images/bgProduct2.jpg") no-repeat scroll right center transparent;
-    float:left;
-    height:219px;
-    margin:0 16px 0 0;
-    padding:8px 8px 8px 7px;
-    width:209px;
+.products ul li {
+background:url("../images/bgProduct2.jpg") no-repeat scroll right center transparent;
+float:left;
+height:219px;
+   margin:0 16px 10px 0; 
+padding:8px 8px 8px 7px;
+width:209px;
 }
 .products ul li.last{
     margin:0px;
